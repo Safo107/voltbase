@@ -175,29 +175,29 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
   </a>
   <div class="nav-right">
     <span class="nav-counter" id="visible-count">100 Themen</span>
-    <a href="https://elektrogenius.de" class="nav-pill">🏠 Hauptseite</a>
-    <a href="https://app.elektrogenius.de" target="_blank" class="nav-pill primary">📦 MaterialCheck</a>
+    <a href="https://elektrogenius.de" class="nav-pill"><i data-lucide="home" style="width:14px;height:14px;display:inline;vertical-align:-2px;margin-right:4px"></i> Hauptseite</a>
+    <a href="https://app.elektrogenius.de" target="_blank" class="nav-pill primary"><i data-lucide="package" style="width:14px;height:14px;display:inline;vertical-align:-2px;margin-right:4px"></i> MaterialCheck</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <div id="hero-section" class="hero">
-  <div class="hero-tag">⚡ 100 Themen · Elektrotechnik · Azubi bis Meister</div>
+  <div class="hero-tag"><i data-lucide="zap" style="width:13px;height:13px;display:inline;vertical-align:-1px;margin-right:4px"></i> 100 Themen · Elektrotechnik · Azubi bis Meister</div>
   <h1>VOLT<em>BASE</em></h1>
   <p class="hero-sub">Die komplette Elektrotechnik-Wissensbasis — 100 Themen, von Grundlagen bis Automatisierung. Mit Formeln, Erklärungen und Quiz.</p>
 </div>
 
 <!-- SEARCH -->
 <div id="search-section" class="search-wrap" style="padding:0 4%;position:relative;z-index:1">
-  <span class="search-icon">🔍</span>
+  <span class="search-icon"><i data-lucide="search" style="width:18px;height:18px"></i></span>
   <input class="search-box" type="text" placeholder="Thema suchen… z.B. Ohm, FI-Schalter, Stern-Dreieck, SPS…" oninput="searchTopics(this.value)" id="search-input"/>
   <span class="search-count" id="search-count"></span>
 </div>
 
 <!-- CATEGORY FILTER -->
 <div class="cat-filter" id="cat-filter">
-  <button class="cat-btn active" data-cat="0" onclick="filterCat(0,this)">🔍 Alle <span class="cat-count">100</span></button>
-<button class="cat-btn active" data-cat="1" onclick="filterCat(1,this)" style="--cc:#4fc3f7">⚡ Grundlagen <span class="cat-count">20</span></button><button class="cat-btn active" data-cat="2" onclick="filterCat(2,this)" style="--cc:#00D084">🔌 Bauteile <span class="cat-count">20</span></button><button class="cat-btn active" data-cat="3" onclick="filterCat(3,this)" style="--cc:#f5a623">🏠 Installation <span class="cat-count">20</span></button><button class="cat-btn active" data-cat="4" onclick="filterCat(4,this)" style="--cc:#FF5A5A">⚙️ Maschinen <span class="cat-count">15</span></button><button class="cat-btn active" data-cat="5" onclick="filterCat(5,this)" style="--cc:#B24BF3">🧠 Steuerung <span class="cat-count">15</span></button><button class="cat-btn active" data-cat="6" onclick="filterCat(6,this)" style="--cc:#ff9800">⚠️ Sicherheit <span class="cat-count">10</span></button>
+  <button class="cat-btn active" data-cat="0" onclick="filterCat(0,this)"><i data-lucide="search" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Alle <span class="cat-count">100</span></button>
+<button class="cat-btn active" data-cat="1" onclick="filterCat(1,this)" style="--cc:#4fc3f7"><i data-lucide="zap" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Grundlagen <span class="cat-count">20</span></button><button class="cat-btn active" data-cat="2" onclick="filterCat(2,this)" style="--cc:#00D084"><i data-lucide="plug" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Bauteile <span class="cat-count">20</span></button><button class="cat-btn active" data-cat="3" onclick="filterCat(3,this)" style="--cc:#f5a623"><i data-lucide="home" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Installation <span class="cat-count">20</span></button><button class="cat-btn active" data-cat="4" onclick="filterCat(4,this)" style="--cc:#FF5A5A"><i data-lucide="settings" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Maschinen <span class="cat-count">15</span></button><button class="cat-btn active" data-cat="5" onclick="filterCat(5,this)" style="--cc:#B24BF3"><i data-lucide="cpu" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Steuerung <span class="cat-count">15</span></button><button class="cat-btn active" data-cat="6" onclick="filterCat(6,this)" style="--cc:#ff9800"><i data-lucide="shield-alert" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Sicherheit <span class="cat-count">10</span></button>
 </div>
 
 <!-- TOPIC GRID -->
@@ -207,700 +207,700 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
   <div class="tc-num" style="color:#4fc3f7">01</div>
   <div class="tc-title">Elektrische Spannung (U)</div>
   <div class="tc-preview">Was treibt den Strom an?</div>
-  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">⚡ Grundlagen</span>
+  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">Grundlagen</span>
 </div>
 <div class="tc" onclick="showTopic(2)" data-cat="1" 
   data-title="elektrischer strom (i)" data-preview="elektronen in bewegung.">
   <div class="tc-num" style="color:#4fc3f7">02</div>
   <div class="tc-title">Elektrischer Strom (I)</div>
   <div class="tc-preview">Elektronen in Bewegung.</div>
-  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">⚡ Grundlagen</span>
+  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">Grundlagen</span>
 </div>
 <div class="tc" onclick="showTopic(3)" data-cat="1" 
   data-title="elektrischer widerstand (r)" data-preview="warum fließt nicht immer gleich viel strom?">
   <div class="tc-num" style="color:#4fc3f7">03</div>
   <div class="tc-title">Elektrischer Widerstand (R)</div>
   <div class="tc-preview">Warum fließt nicht immer gleich viel Strom?</div>
-  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">⚡ Grundlagen</span>
+  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">Grundlagen</span>
 </div>
 <div class="tc" onclick="showTopic(4)" data-cat="1" 
   data-title="ohmsches gesetz" data-preview="die wichtigste formel der elektrotechnik.">
   <div class="tc-num" style="color:#4fc3f7">04</div>
   <div class="tc-title">Ohmsches Gesetz</div>
   <div class="tc-preview">Die wichtigste Formel der Elektrotechnik.</div>
-  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">⚡ Grundlagen</span>
+  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">Grundlagen</span>
 </div>
 <div class="tc" onclick="showTopic(5)" data-cat="1" 
   data-title="kirchhoffsche gesetze" data-preview="knotenregel & maschenregel.">
   <div class="tc-num" style="color:#4fc3f7">05</div>
   <div class="tc-title">Kirchhoffsche Gesetze</div>
   <div class="tc-preview">Knotenregel & Maschenregel.</div>
-  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">⚡ Grundlagen</span>
+  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">Grundlagen</span>
 </div>
 <div class="tc" onclick="showTopic(6)" data-cat="1" 
   data-title="leistung (p)" data-preview="energie pro zeiteinheit.">
   <div class="tc-num" style="color:#4fc3f7">06</div>
   <div class="tc-title">Leistung (P)</div>
   <div class="tc-preview">Energie pro Zeiteinheit.</div>
-  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">⚡ Grundlagen</span>
+  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">Grundlagen</span>
 </div>
 <div class="tc" onclick="showTopic(7)" data-cat="1" 
   data-title="arbeit und energie" data-preview="was kostet dein strom wirklich?">
   <div class="tc-num" style="color:#4fc3f7">07</div>
   <div class="tc-title">Arbeit und Energie</div>
   <div class="tc-preview">Was kostet dein Strom wirklich?</div>
-  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">⚡ Grundlagen</span>
+  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">Grundlagen</span>
 </div>
 <div class="tc" onclick="showTopic(8)" data-cat="1" 
   data-title="gleichstrom (dc)" data-preview="konstante richtung, konstante stärke.">
   <div class="tc-num" style="color:#4fc3f7">08</div>
   <div class="tc-title">Gleichstrom (DC)</div>
   <div class="tc-preview">Konstante Richtung, konstante Stärke.</div>
-  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">⚡ Grundlagen</span>
+  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">Grundlagen</span>
 </div>
 <div class="tc" onclick="showTopic(9)" data-cat="1" 
   data-title="wechselstrom (ac)" data-preview="50 hz, 230 v — was steckt dahinter?">
   <div class="tc-num" style="color:#4fc3f7">09</div>
   <div class="tc-title">Wechselstrom (AC)</div>
   <div class="tc-preview">50 Hz, 230 V — was steckt dahinter?</div>
-  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">⚡ Grundlagen</span>
+  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">Grundlagen</span>
 </div>
 <div class="tc" onclick="showTopic(10)" data-cat="1" 
   data-title="frequenz" data-preview="schwingungen pro sekunde.">
   <div class="tc-num" style="color:#4fc3f7">10</div>
   <div class="tc-title">Frequenz</div>
   <div class="tc-preview">Schwingungen pro Sekunde.</div>
-  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">⚡ Grundlagen</span>
+  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">Grundlagen</span>
 </div>
 <div class="tc" onclick="showTopic(11)" data-cat="1" 
   data-title="periodendauer" data-preview="zeit für eine vollständige schwingung.">
   <div class="tc-num" style="color:#4fc3f7">11</div>
   <div class="tc-title">Periodendauer</div>
   <div class="tc-preview">Zeit für eine vollständige Schwingung.</div>
-  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">⚡ Grundlagen</span>
+  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">Grundlagen</span>
 </div>
 <div class="tc" onclick="showTopic(12)" data-cat="1" 
   data-title="effektivwert" data-preview="230v — aber der strom ist manchmal 325v hoch!">
   <div class="tc-num" style="color:#4fc3f7">12</div>
   <div class="tc-title">Effektivwert</div>
   <div class="tc-preview">230V — aber der Strom ist manchmal 325V hoch!</div>
-  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">⚡ Grundlagen</span>
+  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">Grundlagen</span>
 </div>
 <div class="tc" onclick="showTopic(13)" data-cat="1" 
   data-title="spitze-spitze-wert" data-preview="von minus- bis plusspitze.">
   <div class="tc-num" style="color:#4fc3f7">13</div>
   <div class="tc-title">Spitze-Spitze-Wert</div>
   <div class="tc-preview">Von Minus- bis Plusspitze.</div>
-  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">⚡ Grundlagen</span>
+  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">Grundlagen</span>
 </div>
 <div class="tc" onclick="showTopic(14)" data-cat="1" 
   data-title="phasenverschiebung" data-preview="wenn spannung und strom zeitlich versetzt sind.">
   <div class="tc-num" style="color:#4fc3f7">14</div>
   <div class="tc-title">Phasenverschiebung</div>
   <div class="tc-preview">Wenn Spannung und Strom zeitlich versetzt sind.</div>
-  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">⚡ Grundlagen</span>
+  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">Grundlagen</span>
 </div>
 <div class="tc" onclick="showTopic(15)" data-cat="1" 
   data-title="blindleistung" data-preview="leistung die pendelt aber keine arbeit verrichtet.">
   <div class="tc-num" style="color:#4fc3f7">15</div>
   <div class="tc-title">Blindleistung</div>
   <div class="tc-preview">Leistung die pendelt aber keine Arbeit verrichtet.</div>
-  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">⚡ Grundlagen</span>
+  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">Grundlagen</span>
 </div>
 <div class="tc" onclick="showTopic(16)" data-cat="1" 
   data-title="scheinleistung" data-preview="die gesamte netzbelastung.">
   <div class="tc-num" style="color:#4fc3f7">16</div>
   <div class="tc-title">Scheinleistung</div>
   <div class="tc-preview">Die gesamte Netzbelastung.</div>
-  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">⚡ Grundlagen</span>
+  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">Grundlagen</span>
 </div>
 <div class="tc" onclick="showTopic(17)" data-cat="1" 
   data-title="wirkleistung" data-preview="die leistung die wirklich arbeit verrichtet.">
   <div class="tc-num" style="color:#4fc3f7">17</div>
   <div class="tc-title">Wirkleistung</div>
   <div class="tc-preview">Die Leistung die wirklich Arbeit verrichtet.</div>
-  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">⚡ Grundlagen</span>
+  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">Grundlagen</span>
 </div>
 <div class="tc" onclick="showTopic(18)" data-cat="1" 
   data-title="leistungsfaktor (cos φ)" data-preview="effizienz der energienutzung.">
   <div class="tc-num" style="color:#4fc3f7">18</div>
   <div class="tc-title">Leistungsfaktor (cos φ)</div>
   <div class="tc-preview">Effizienz der Energienutzung.</div>
-  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">⚡ Grundlagen</span>
+  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">Grundlagen</span>
 </div>
 <div class="tc" onclick="showTopic(19)" data-cat="1" 
   data-title="elektrische ladung" data-preview="die grundgröße der elektrizität.">
   <div class="tc-num" style="color:#4fc3f7">19</div>
   <div class="tc-title">Elektrische Ladung</div>
   <div class="tc-preview">Die Grundgröße der Elektrizität.</div>
-  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">⚡ Grundlagen</span>
+  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">Grundlagen</span>
 </div>
 <div class="tc" onclick="showTopic(20)" data-cat="1" 
   data-title="leitfähigkeit" data-preview="das gegenteil des widerstands.">
   <div class="tc-num" style="color:#4fc3f7">20</div>
   <div class="tc-title">Leitfähigkeit</div>
   <div class="tc-preview">Das Gegenteil des Widerstands.</div>
-  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">⚡ Grundlagen</span>
+  <span class="tc-tag" style="background:#4fc3f722;color:#4fc3f7;border-color:#4fc3f744">Grundlagen</span>
 </div>
 <div class="tc" onclick="showTopic(21)" data-cat="2" 
   data-title="widerstände" data-preview="farbcode, arten & kennzeichnung.">
   <div class="tc-num" style="color:#00D084">21</div>
   <div class="tc-title">Widerstände</div>
   <div class="tc-preview">Farbcode, Arten & Kennzeichnung.</div>
-  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">🔌 Bauteile</span>
+  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">Bauteile</span>
 </div>
 <div class="tc" onclick="showTopic(22)" data-cat="2" 
   data-title="kondensatoren" data-preview="energiespeicher im elektrischen feld.">
   <div class="tc-num" style="color:#00D084">22</div>
   <div class="tc-title">Kondensatoren</div>
   <div class="tc-preview">Energiespeicher im elektrischen Feld.</div>
-  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">🔌 Bauteile</span>
+  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">Bauteile</span>
 </div>
 <div class="tc" onclick="showTopic(23)" data-cat="2" 
   data-title="spulen (induktivität)" data-preview="energie im magnetfeld.">
   <div class="tc-num" style="color:#00D084">23</div>
   <div class="tc-title">Spulen (Induktivität)</div>
   <div class="tc-preview">Energie im Magnetfeld.</div>
-  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">🔌 Bauteile</span>
+  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">Bauteile</span>
 </div>
 <div class="tc" onclick="showTopic(24)" data-cat="2" 
   data-title="transformator" data-preview="spannung hoch- oder runtertransformieren.">
   <div class="tc-num" style="color:#00D084">24</div>
   <div class="tc-title">Transformator</div>
   <div class="tc-preview">Spannung hoch- oder runtertransformieren.</div>
-  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">🔌 Bauteile</span>
+  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">Bauteile</span>
 </div>
 <div class="tc" onclick="showTopic(25)" data-cat="2" 
   data-title="relais" data-preview="kleiner strom schaltet großen strom.">
   <div class="tc-num" style="color:#00D084">25</div>
   <div class="tc-title">Relais</div>
   <div class="tc-preview">Kleiner Strom schaltet großen Strom.</div>
-  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">🔌 Bauteile</span>
+  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">Bauteile</span>
 </div>
 <div class="tc" onclick="showTopic(26)" data-cat="2" 
   data-title="schütz" data-preview="das kraftrelais für motoren.">
   <div class="tc-num" style="color:#00D084">26</div>
   <div class="tc-title">Schütz</div>
   <div class="tc-preview">Das Kraftrelais für Motoren.</div>
-  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">🔌 Bauteile</span>
+  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">Bauteile</span>
 </div>
 <div class="tc" onclick="showTopic(27)" data-cat="2" 
   data-title="sicherungen" data-preview="einmal und nie wieder.">
   <div class="tc-num" style="color:#00D084">27</div>
   <div class="tc-title">Sicherungen</div>
   <div class="tc-preview">Einmal und nie wieder.</div>
-  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">🔌 Bauteile</span>
+  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">Bauteile</span>
 </div>
 <div class="tc" onclick="showTopic(28)" data-cat="2" 
   data-title="leitungsschutzschalter" data-preview="b, c, d — die auslösecharakteristiken.">
   <div class="tc-num" style="color:#00D084">28</div>
   <div class="tc-title">Leitungsschutzschalter</div>
   <div class="tc-preview">B, C, D — die Auslösecharakteristiken.</div>
-  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">🔌 Bauteile</span>
+  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">Bauteile</span>
 </div>
 <div class="tc" onclick="showTopic(29)" data-cat="2" 
   data-title="fi-schalter (rcd)" data-preview="lebensretter — 30ma genügen.">
   <div class="tc-num" style="color:#00D084">29</div>
   <div class="tc-title">FI-Schalter (RCD)</div>
   <div class="tc-preview">Lebensretter — 30mA genügen.</div>
-  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">🔌 Bauteile</span>
+  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">Bauteile</span>
 </div>
 <div class="tc" onclick="showTopic(30)" data-cat="2" 
   data-title="halbleiter" data-preview="das fundament moderner elektronik.">
   <div class="tc-num" style="color:#00D084">30</div>
   <div class="tc-title">Halbleiter</div>
   <div class="tc-preview">Das Fundament moderner Elektronik.</div>
-  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">🔌 Bauteile</span>
+  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">Bauteile</span>
 </div>
 <div class="tc" onclick="showTopic(31)" data-cat="2" 
   data-title="diode" data-preview="strom nur in eine richtung.">
   <div class="tc-num" style="color:#00D084">31</div>
   <div class="tc-title">Diode</div>
   <div class="tc-preview">Strom nur in eine Richtung.</div>
-  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">🔌 Bauteile</span>
+  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">Bauteile</span>
 </div>
 <div class="tc" onclick="showTopic(32)" data-cat="2" 
   data-title="zenerdiode" data-preview="spannungsreferenz und schutz.">
   <div class="tc-num" style="color:#00D084">32</div>
   <div class="tc-title">Zenerdiode</div>
   <div class="tc-preview">Spannungsreferenz und Schutz.</div>
-  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">🔌 Bauteile</span>
+  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">Bauteile</span>
 </div>
 <div class="tc" onclick="showTopic(33)" data-cat="2" 
   data-title="transistor" data-preview="schalter und verstärker.">
   <div class="tc-num" style="color:#00D084">33</div>
   <div class="tc-title">Transistor</div>
   <div class="tc-preview">Schalter und Verstärker.</div>
-  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">🔌 Bauteile</span>
+  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">Bauteile</span>
 </div>
 <div class="tc" onclick="showTopic(34)" data-cat="2" 
   data-title="thyristor" data-preview="einschalten ja — ausschalten nur durch nulldurchgang.">
   <div class="tc-num" style="color:#00D084">34</div>
   <div class="tc-title">Thyristor</div>
   <div class="tc-preview">Einschalten ja — ausschalten nur durch Nulldurchgang.</div>
-  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">🔌 Bauteile</span>
+  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">Bauteile</span>
 </div>
 <div class="tc" onclick="showTopic(35)" data-cat="2" 
   data-title="gleichrichter" data-preview="aus wechselstrom wird gleichstrom.">
   <div class="tc-num" style="color:#00D084">35</div>
   <div class="tc-title">Gleichrichter</div>
   <div class="tc-preview">Aus Wechselstrom wird Gleichstrom.</div>
-  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">🔌 Bauteile</span>
+  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">Bauteile</span>
 </div>
 <div class="tc" onclick="showTopic(36)" data-cat="2" 
   data-title="led" data-preview="licht aus dem halbleiter.">
   <div class="tc-num" style="color:#00D084">36</div>
   <div class="tc-title">LED</div>
   <div class="tc-preview">Licht aus dem Halbleiter.</div>
-  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">🔌 Bauteile</span>
+  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">Bauteile</span>
 </div>
 <div class="tc" onclick="showTopic(37)" data-cat="2" 
   data-title="sensoren" data-preview="die sinne der anlage.">
   <div class="tc-num" style="color:#00D084">37</div>
   <div class="tc-title">Sensoren</div>
   <div class="tc-preview">Die Sinne der Anlage.</div>
-  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">🔌 Bauteile</span>
+  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">Bauteile</span>
 </div>
 <div class="tc" onclick="showTopic(38)" data-cat="2" 
   data-title="taster & schalter" data-preview="der unterschied und wann man was verwendet.">
   <div class="tc-num" style="color:#00D084">38</div>
   <div class="tc-title">Taster & Schalter</div>
   <div class="tc-preview">Der Unterschied und wann man was verwendet.</div>
-  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">🔌 Bauteile</span>
+  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">Bauteile</span>
 </div>
 <div class="tc" onclick="showTopic(39)" data-cat="2" 
   data-title="steckdosen" data-preview="mehr als nur ein loch in der wand.">
   <div class="tc-num" style="color:#00D084">39</div>
   <div class="tc-title">Steckdosen</div>
   <div class="tc-preview">Mehr als nur ein Loch in der Wand.</div>
-  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">🔌 Bauteile</span>
+  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">Bauteile</span>
 </div>
 <div class="tc" onclick="showTopic(40)" data-cat="2" 
   data-title="verteilungen" data-preview="unterverteilung planen und aufbauen.">
   <div class="tc-num" style="color:#00D084">40</div>
   <div class="tc-title">Verteilungen</div>
   <div class="tc-preview">Unterverteilung planen und aufbauen.</div>
-  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">🔌 Bauteile</span>
+  <span class="tc-tag" style="background:#00D08422;color:#00D084;border-color:#00D08444">Bauteile</span>
 </div>
 <div class="tc" onclick="showTopic(41)" data-cat="3" 
   data-title="leitungsverlegung" data-preview="regeln für sichere kabelverlegung.">
   <div class="tc-num" style="color:#f5a623">41</div>
   <div class="tc-title">Leitungsverlegung</div>
   <div class="tc-preview">Regeln für sichere Kabelverlegung.</div>
-  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">🏠 Installation</span>
+  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">Installation</span>
 </div>
 <div class="tc" onclick="showTopic(42)" data-cat="3" 
   data-title="verlegearten" data-preview="a1, b2, c — einfluss auf strombelastbarkeit.">
   <div class="tc-num" style="color:#f5a623">42</div>
   <div class="tc-title">Verlegearten</div>
   <div class="tc-preview">A1, B2, C — Einfluss auf Strombelastbarkeit.</div>
-  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">🏠 Installation</span>
+  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">Installation</span>
 </div>
 <div class="tc" onclick="showTopic(43)" data-cat="3" 
   data-title="kabelarten" data-preview="nym, nyy, h07rn-f — was steckt dahinter?">
   <div class="tc-num" style="color:#f5a623">43</div>
   <div class="tc-title">Kabelarten</div>
   <div class="tc-preview">NYM, NYY, H07RN-F — was steckt dahinter?</div>
-  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">🏠 Installation</span>
+  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">Installation</span>
 </div>
 <div class="tc" onclick="showTopic(44)" data-cat="3" 
   data-title="schutzmaßnahmen" data-preview="drei ebenen des schutzes gegen elektrischen schlag.">
   <div class="tc-num" style="color:#f5a623">44</div>
   <div class="tc-title">Schutzmaßnahmen</div>
   <div class="tc-preview">Drei Ebenen des Schutzes gegen elektrischen Schlag.</div>
-  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">🏠 Installation</span>
+  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">Installation</span>
 </div>
 <div class="tc" onclick="showTopic(45)" data-cat="3" 
   data-title="schutzklassen" data-preview="sk i, sk ii, sk iii.">
   <div class="tc-num" style="color:#f5a623">45</div>
   <div class="tc-title">Schutzklassen</div>
   <div class="tc-preview">SK I, SK II, SK III.</div>
-  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">🏠 Installation</span>
+  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">Installation</span>
 </div>
 <div class="tc" onclick="showTopic(46)" data-cat="3" 
   data-title="ip-schutzarten" data-preview="ip44, ip65, ip68.">
   <div class="tc-num" style="color:#f5a623">46</div>
   <div class="tc-title">IP-Schutzarten</div>
   <div class="tc-preview">IP44, IP65, IP68.</div>
-  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">🏠 Installation</span>
+  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">Installation</span>
 </div>
 <div class="tc" onclick="showTopic(47)" data-cat="3" 
   data-title="erdungssysteme" data-preview="tn-s, tn-c, tt, it.">
   <div class="tc-num" style="color:#f5a623">47</div>
   <div class="tc-title">Erdungssysteme</div>
   <div class="tc-preview">TN-S, TN-C, TT, IT.</div>
-  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">🏠 Installation</span>
+  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">Installation</span>
 </div>
 <div class="tc" onclick="showTopic(48)" data-cat="3" 
   data-title="potentialausgleich" data-preview="alle leitfähigen teile verbinden.">
   <div class="tc-num" style="color:#f5a623">48</div>
   <div class="tc-title">Potentialausgleich</div>
   <div class="tc-preview">Alle leitfähigen Teile verbinden.</div>
-  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">🏠 Installation</span>
+  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">Installation</span>
 </div>
 <div class="tc" onclick="showTopic(49)" data-cat="3" 
   data-title="kurzschluss" data-preview="was passiert wenn l auf n trifft?">
   <div class="tc-num" style="color:#f5a623">49</div>
   <div class="tc-title">Kurzschluss</div>
   <div class="tc-preview">Was passiert wenn L auf N trifft?</div>
-  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">🏠 Installation</span>
+  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">Installation</span>
 </div>
 <div class="tc" onclick="showTopic(50)" data-cat="3" 
   data-title="überlast" data-preview="zu viel strom für zu dünne leitung.">
   <div class="tc-num" style="color:#f5a623">50</div>
   <div class="tc-title">Überlast</div>
   <div class="tc-preview">Zu viel Strom für zu dünne Leitung.</div>
-  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">🏠 Installation</span>
+  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">Installation</span>
 </div>
 <div class="tc" onclick="showTopic(51)" data-cat="3" 
   data-title="selektivität" data-preview="nur die richtige sicherung löst aus.">
   <div class="tc-num" style="color:#f5a623">51</div>
   <div class="tc-title">Selektivität</div>
   <div class="tc-preview">Nur die richtige Sicherung löst aus.</div>
-  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">🏠 Installation</span>
+  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">Installation</span>
 </div>
 <div class="tc" onclick="showTopic(52)" data-cat="3" 
   data-title="spannungsfall" data-preview="der leitungswiderstand kostet spannung.">
   <div class="tc-num" style="color:#f5a623">52</div>
   <div class="tc-title">Spannungsfall</div>
   <div class="tc-preview">Der Leitungswiderstand kostet Spannung.</div>
-  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">🏠 Installation</span>
+  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">Installation</span>
 </div>
 <div class="tc" onclick="showTopic(53)" data-cat="3" 
   data-title="leitungsdimensionierung" data-preview="welcher querschnitt für welchen strom?">
   <div class="tc-num" style="color:#f5a623">53</div>
   <div class="tc-title">Leitungsdimensionierung</div>
   <div class="tc-preview">Welcher Querschnitt für welchen Strom?</div>
-  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">🏠 Installation</span>
+  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">Installation</span>
 </div>
 <div class="tc" onclick="showTopic(54)" data-cat="3" 
   data-title="unterverteilung aufbauen" data-preview="schritt für schritt.">
   <div class="tc-num" style="color:#f5a623">54</div>
   <div class="tc-title">Unterverteilung aufbauen</div>
   <div class="tc-preview">Schritt für Schritt.</div>
-  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">🏠 Installation</span>
+  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">Installation</span>
 </div>
 <div class="tc" onclick="showTopic(55)" data-cat="3" 
   data-title="stromkreisarten" data-preview="licht, steckdosen, sonderstromkreise.">
   <div class="tc-num" style="color:#f5a623">55</div>
   <div class="tc-title">Stromkreisarten</div>
   <div class="tc-preview">Licht, Steckdosen, Sonderstromkreise.</div>
-  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">🏠 Installation</span>
+  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">Installation</span>
 </div>
 <div class="tc" onclick="showTopic(56)" data-cat="3" 
   data-title="drehstromsystem" data-preview="drei phasen, 120° versetzt.">
   <div class="tc-num" style="color:#f5a623">56</div>
   <div class="tc-title">Drehstromsystem</div>
   <div class="tc-preview">Drei Phasen, 120° versetzt.</div>
-  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">🏠 Installation</span>
+  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">Installation</span>
 </div>
 <div class="tc" onclick="showTopic(57)" data-cat="3" 
   data-title="neutralleiter & schutzleiter" data-preview="n ist blau, pe ist grün-gelb.">
   <div class="tc-num" style="color:#f5a623">57</div>
   <div class="tc-title">Neutralleiter & Schutzleiter</div>
   <div class="tc-preview">N ist blau, PE ist grün-gelb.</div>
-  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">🏠 Installation</span>
+  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">Installation</span>
 </div>
 <div class="tc" onclick="showTopic(58)" data-cat="3" 
   data-title="pen-leiter" data-preview="pe und n in einem — nur ältere anlagen.">
   <div class="tc-num" style="color:#f5a623">58</div>
   <div class="tc-title">PEN-Leiter</div>
   <div class="tc-preview">PE und N in einem — nur ältere Anlagen.</div>
-  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">🏠 Installation</span>
+  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">Installation</span>
 </div>
 <div class="tc" onclick="showTopic(59)" data-cat="3" 
   data-title="installationszonen" data-preview="wo darf ich leitungen in der wand verlegen?">
   <div class="tc-num" style="color:#f5a623">59</div>
   <div class="tc-title">Installationszonen</div>
   <div class="tc-preview">Wo darf ich Leitungen in der Wand verlegen?</div>
-  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">🏠 Installation</span>
+  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">Installation</span>
 </div>
 <div class="tc" onclick="showTopic(60)" data-cat="3" 
   data-title="unterputz / aufputz" data-preview="up vs ap.">
   <div class="tc-num" style="color:#f5a623">60</div>
   <div class="tc-title">Unterputz / Aufputz</div>
   <div class="tc-preview">UP vs AP.</div>
-  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">🏠 Installation</span>
+  <span class="tc-tag" style="background:#f5a62322;color:#f5a623;border-color:#f5a62344">Installation</span>
 </div>
 <div class="tc" onclick="showTopic(61)" data-cat="4" 
   data-title="elektromotoren" data-preview="strom wird drehbewegung.">
   <div class="tc-num" style="color:#FF5A5A">61</div>
   <div class="tc-title">Elektromotoren</div>
   <div class="tc-preview">Strom wird Drehbewegung.</div>
-  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">⚙️ Maschinen</span>
+  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">Maschinen</span>
 </div>
 <div class="tc" onclick="showTopic(62)" data-cat="4" 
   data-title="asynchronmotor" data-preview="der arbeitspferd der industrie.">
   <div class="tc-num" style="color:#FF5A5A">62</div>
   <div class="tc-title">Asynchronmotor</div>
   <div class="tc-preview">Der Arbeitspferd der Industrie.</div>
-  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">⚙️ Maschinen</span>
+  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">Maschinen</span>
 </div>
 <div class="tc" onclick="showTopic(63)" data-cat="4" 
   data-title="synchronmotor" data-preview="dreht exakt mit dem netz.">
   <div class="tc-num" style="color:#FF5A5A">63</div>
   <div class="tc-title">Synchronmotor</div>
   <div class="tc-preview">Dreht exakt mit dem Netz.</div>
-  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">⚙️ Maschinen</span>
+  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">Maschinen</span>
 </div>
 <div class="tc" onclick="showTopic(64)" data-cat="4" 
   data-title="drehfeld" data-preview="warum dreht der motor?">
   <div class="tc-num" style="color:#FF5A5A">64</div>
   <div class="tc-title">Drehfeld</div>
   <div class="tc-preview">Warum dreht der Motor?</div>
-  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">⚙️ Maschinen</span>
+  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">Maschinen</span>
 </div>
 <div class="tc" onclick="showTopic(65)" data-cat="4" 
   data-title="stern-dreieck-schaltung" data-preview="anlaufstrom auf 1/3 reduzieren.">
   <div class="tc-num" style="color:#FF5A5A">65</div>
   <div class="tc-title">Stern-Dreieck-Schaltung</div>
   <div class="tc-preview">Anlaufstrom auf 1/3 reduzieren.</div>
-  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">⚙️ Maschinen</span>
+  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">Maschinen</span>
 </div>
 <div class="tc" onclick="showTopic(66)" data-cat="4" 
   data-title="motorschutz" data-preview="überhitzung und kurzschluss verhindern.">
   <div class="tc-num" style="color:#FF5A5A">66</div>
   <div class="tc-title">Motorschutz</div>
   <div class="tc-preview">Überhitzung und Kurzschluss verhindern.</div>
-  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">⚙️ Maschinen</span>
+  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">Maschinen</span>
 </div>
 <div class="tc" onclick="showTopic(67)" data-cat="4" 
   data-title="frequenzumrichter" data-preview="drehzahl stufenlos regeln.">
   <div class="tc-num" style="color:#FF5A5A">67</div>
   <div class="tc-title">Frequenzumrichter</div>
   <div class="tc-preview">Drehzahl stufenlos regeln.</div>
-  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">⚙️ Maschinen</span>
+  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">Maschinen</span>
 </div>
 <div class="tc" onclick="showTopic(68)" data-cat="4" 
   data-title="generator" data-preview="bewegung wird zu strom.">
   <div class="tc-num" style="color:#FF5A5A">68</div>
   <div class="tc-title">Generator</div>
   <div class="tc-preview">Bewegung wird zu Strom.</div>
-  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">⚙️ Maschinen</span>
+  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">Maschinen</span>
 </div>
 <div class="tc" onclick="showTopic(69)" data-cat="4" 
   data-title="transformator-prinzip" data-preview="magnetfelder als energieüberträger.">
   <div class="tc-num" style="color:#FF5A5A">69</div>
   <div class="tc-title">Transformator-Prinzip</div>
   <div class="tc-preview">Magnetfelder als Energieüberträger.</div>
-  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">⚙️ Maschinen</span>
+  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">Maschinen</span>
 </div>
 <div class="tc" onclick="showTopic(70)" data-cat="4" 
   data-title="wirkungsgrad maschinen" data-preview="wie viel energie geht verloren?">
   <div class="tc-num" style="color:#FF5A5A">70</div>
   <div class="tc-title">Wirkungsgrad Maschinen</div>
   <div class="tc-preview">Wie viel Energie geht verloren?</div>
-  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">⚙️ Maschinen</span>
+  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">Maschinen</span>
 </div>
 <div class="tc" onclick="showTopic(71)" data-cat="4" 
   data-title="anlaufverfahren" data-preview="sanft starten schützt motor und netz.">
   <div class="tc-num" style="color:#FF5A5A">71</div>
   <div class="tc-title">Anlaufverfahren</div>
   <div class="tc-preview">Sanft starten schützt Motor und Netz.</div>
-  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">⚙️ Maschinen</span>
+  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">Maschinen</span>
 </div>
 <div class="tc" onclick="showTopic(72)" data-cat="4" 
   data-title="drehrichtungsumkehr" data-preview="einfach zwei phasen tauschen.">
   <div class="tc-num" style="color:#FF5A5A">72</div>
   <div class="tc-title">Drehrichtungsumkehr</div>
   <div class="tc-preview">Einfach zwei Phasen tauschen.</div>
-  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">⚙️ Maschinen</span>
+  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">Maschinen</span>
 </div>
 <div class="tc" onclick="showTopic(73)" data-cat="4" 
   data-title="motorsteuerungen" data-preview="direkt, stern-dreieck, wendeschütz.">
   <div class="tc-num" style="color:#FF5A5A">73</div>
   <div class="tc-title">Motorsteuerungen</div>
   <div class="tc-preview">Direkt, Stern-Dreieck, Wendeschütz.</div>
-  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">⚙️ Maschinen</span>
+  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">Maschinen</span>
 </div>
 <div class="tc" onclick="showTopic(74)" data-cat="4" 
   data-title="bremsen von motoren" data-preview="schnell stoppen ohne mechanische bremse.">
   <div class="tc-num" style="color:#FF5A5A">74</div>
   <div class="tc-title">Bremsen von Motoren</div>
   <div class="tc-preview">Schnell stoppen ohne mechanische Bremse.</div>
-  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">⚙️ Maschinen</span>
+  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">Maschinen</span>
 </div>
 <div class="tc" onclick="showTopic(75)" data-cat="4" 
   data-title="lastarten" data-preview="welche lastcharakteristik hat welche maschine?">
   <div class="tc-num" style="color:#FF5A5A">75</div>
   <div class="tc-title">Lastarten</div>
   <div class="tc-preview">Welche Lastcharakteristik hat welche Maschine?</div>
-  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">⚙️ Maschinen</span>
+  <span class="tc-tag" style="background:#FF5A5A22;color:#FF5A5A;border-color:#FF5A5A44">Maschinen</span>
 </div>
 <div class="tc" onclick="showTopic(76)" data-cat="5" 
   data-title="sps" data-preview="das gehirn moderner anlagen.">
   <div class="tc-num" style="color:#B24BF3">76</div>
   <div class="tc-title">SPS</div>
   <div class="tc-preview">Das Gehirn moderner Anlagen.</div>
-  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">🧠 Steuerung</span>
+  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">Steuerung</span>
 </div>
 <div class="tc" onclick="showTopic(77)" data-cat="5" 
   data-title="logo! steuerung" data-preview="sps für kleine automatisierungsaufgaben.">
   <div class="tc-num" style="color:#B24BF3">77</div>
   <div class="tc-title">LOGO! Steuerung</div>
   <div class="tc-preview">SPS für kleine Automatisierungsaufgaben.</div>
-  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">🧠 Steuerung</span>
+  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">Steuerung</span>
 </div>
 <div class="tc" onclick="showTopic(78)" data-cat="5" 
   data-title="digitale signale" data-preview="0 oder 1 — kein dazwischen.">
   <div class="tc-num" style="color:#B24BF3">78</div>
   <div class="tc-title">Digitale Signale</div>
   <div class="tc-preview">0 oder 1 — kein Dazwischen.</div>
-  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">🧠 Steuerung</span>
+  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">Steuerung</span>
 </div>
 <div class="tc" onclick="showTopic(79)" data-cat="5" 
   data-title="analoge signale" data-preview="stufenlose werte.">
   <div class="tc-num" style="color:#B24BF3">79</div>
   <div class="tc-title">Analoge Signale</div>
   <div class="tc-preview">Stufenlose Werte.</div>
-  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">🧠 Steuerung</span>
+  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">Steuerung</span>
 </div>
 <div class="tc" onclick="showTopic(80)" data-cat="5" 
   data-title="sensor-aktor-prinzip" data-preview="erfassen → verarbeiten → ausgeben.">
   <div class="tc-num" style="color:#B24BF3">80</div>
   <div class="tc-title">Sensor-Aktor-Prinzip</div>
   <div class="tc-preview">Erfassen → Verarbeiten → Ausgeben.</div>
-  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">🧠 Steuerung</span>
+  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">Steuerung</span>
 </div>
 <div class="tc" onclick="showTopic(81)" data-cat="5" 
   data-title="zeitrelais" data-preview="verzögertes schalten.">
   <div class="tc-num" style="color:#B24BF3">81</div>
   <div class="tc-title">Zeitrelais</div>
   <div class="tc-preview">Verzögertes Schalten.</div>
-  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">🧠 Steuerung</span>
+  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">Steuerung</span>
 </div>
 <div class="tc" onclick="showTopic(82)" data-cat="5" 
   data-title="schützsteuerung" data-preview="der klassiker der industrieautomation.">
   <div class="tc-num" style="color:#B24BF3">82</div>
   <div class="tc-title">Schützsteuerung</div>
   <div class="tc-preview">Der Klassiker der Industrieautomation.</div>
-  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">🧠 Steuerung</span>
+  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">Steuerung</span>
 </div>
 <div class="tc" onclick="showTopic(83)" data-cat="5" 
   data-title="selbsthaltung" data-preview="motor läuft weiter ohne finger am taster.">
   <div class="tc-num" style="color:#B24BF3">83</div>
   <div class="tc-title">Selbsthaltung</div>
   <div class="tc-preview">Motor läuft weiter ohne Finger am Taster.</div>
-  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">🧠 Steuerung</span>
+  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">Steuerung</span>
 </div>
 <div class="tc" onclick="showTopic(84)" data-cat="5" 
   data-title="verriegelung" data-preview="zwei schütze dürfen nie gleichzeitig schalten.">
   <div class="tc-num" style="color:#B24BF3">84</div>
   <div class="tc-title">Verriegelung</div>
   <div class="tc-preview">Zwei Schütze dürfen nie gleichzeitig schalten.</div>
-  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">🧠 Steuerung</span>
+  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">Steuerung</span>
 </div>
 <div class="tc" onclick="showTopic(85)" data-cat="5" 
   data-title="stromlaufplan lesen" data-preview="strom fließt von + nach −.">
   <div class="tc-num" style="color:#B24BF3">85</div>
   <div class="tc-title">Stromlaufplan lesen</div>
   <div class="tc-preview">Strom fließt von + nach −.</div>
-  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">🧠 Steuerung</span>
+  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">Steuerung</span>
 </div>
 <div class="tc" onclick="showTopic(86)" data-cat="5" 
   data-title="funktionsplan (fup)" data-preview="sps-programmierung grafisch.">
   <div class="tc-num" style="color:#B24BF3">86</div>
   <div class="tc-title">Funktionsplan (FUP)</div>
   <div class="tc-preview">SPS-Programmierung grafisch.</div>
-  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">🧠 Steuerung</span>
+  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">Steuerung</span>
 </div>
 <div class="tc" onclick="showTopic(87)" data-cat="5" 
   data-title="kontaktplan (kop)" data-preview="wie ein stromlaufplan — für die sps.">
   <div class="tc-num" style="color:#B24BF3">87</div>
   <div class="tc-title">Kontaktplan (KOP)</div>
   <div class="tc-preview">Wie ein Stromlaufplan — für die SPS.</div>
-  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">🧠 Steuerung</span>
+  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">Steuerung</span>
 </div>
 <div class="tc" onclick="showTopic(88)" data-cat="5" 
   data-title="ablaufsteuerung" data-preview="schritt für schritt durch den prozess.">
   <div class="tc-num" style="color:#B24BF3">88</div>
   <div class="tc-title">Ablaufsteuerung</div>
   <div class="tc-preview">Schritt für Schritt durch den Prozess.</div>
-  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">🧠 Steuerung</span>
+  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">Steuerung</span>
 </div>
 <div class="tc" onclick="showTopic(89)" data-cat="5" 
   data-title="bussysteme" data-preview="knx, profibus, ethernet/ip.">
   <div class="tc-num" style="color:#B24BF3">89</div>
   <div class="tc-title">Bussysteme</div>
   <div class="tc-preview">KNX, Profibus, EtherNet/IP.</div>
-  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">🧠 Steuerung</span>
+  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">Steuerung</span>
 </div>
 <div class="tc" onclick="showTopic(90)" data-cat="5" 
   data-title="smart home" data-preview="knx, dali, matter.">
   <div class="tc-num" style="color:#B24BF3">90</div>
   <div class="tc-title">Smart Home</div>
   <div class="tc-preview">KNX, DALI, Matter.</div>
-  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">🧠 Steuerung</span>
+  <span class="tc-tag" style="background:#B24BF322;color:#B24BF3;border-color:#B24BF344">Steuerung</span>
 </div>
 <div class="tc" onclick="showTopic(91)" data-cat="6" 
   data-title="din vde vorschriften" data-preview="das regelwerk des elektriker-berufs.">
   <div class="tc-num" style="color:#ff9800">91</div>
   <div class="tc-title">DIN VDE Vorschriften</div>
   <div class="tc-preview">Das Regelwerk des Elektriker-Berufs.</div>
-  <span class="tc-tag" style="background:#ff980022;color:#ff9800;border-color:#ff980044">⚠️ Sicherheit</span>
+  <span class="tc-tag" style="background:#ff980022;color:#ff9800;border-color:#ff980044">Sicherheit</span>
 </div>
 <div class="tc" onclick="showTopic(92)" data-cat="6" 
   data-title="5 sicherheitsregeln" data-preview="niemals vergessen — dein leben hängt davon ab.">
   <div class="tc-num" style="color:#ff9800">92</div>
   <div class="tc-title">5 Sicherheitsregeln</div>
   <div class="tc-preview">Niemals vergessen — dein Leben hängt davon ab.</div>
-  <span class="tc-tag" style="background:#ff980022;color:#ff9800;border-color:#ff980044">⚠️ Sicherheit</span>
+  <span class="tc-tag" style="background:#ff980022;color:#ff9800;border-color:#ff980044">Sicherheit</span>
 </div>
 <div class="tc" onclick="showTopic(93)" data-cat="6" 
   data-title="arbeiten unter spannung" data-preview="aus — nur mit sonderausbildung!">
   <div class="tc-num" style="color:#ff9800">93</div>
   <div class="tc-title">Arbeiten unter Spannung</div>
   <div class="tc-preview">AuS — nur mit Sonderausbildung!</div>
-  <span class="tc-tag" style="background:#ff980022;color:#ff9800;border-color:#ff980044">⚠️ Sicherheit</span>
+  <span class="tc-tag" style="background:#ff980022;color:#ff9800;border-color:#ff980044">Sicherheit</span>
 </div>
 <div class="tc" onclick="showTopic(94)" data-cat="6" 
   data-title="psa" data-preview="persönliche schutzausrüstung.">
   <div class="tc-num" style="color:#ff9800">94</div>
   <div class="tc-title">PSA</div>
   <div class="tc-preview">Persönliche Schutzausrüstung.</div>
-  <span class="tc-tag" style="background:#ff980022;color:#ff9800;border-color:#ff980044">⚠️ Sicherheit</span>
+  <span class="tc-tag" style="background:#ff980022;color:#ff9800;border-color:#ff980044">Sicherheit</span>
 </div>
 <div class="tc" onclick="showTopic(95)" data-cat="6" 
   data-title="gefahren des elektrischen stroms" data-preview="was strom mit dem körper macht.">
   <div class="tc-num" style="color:#ff9800">95</div>
   <div class="tc-title">Gefahren des elektrischen Stroms</div>
   <div class="tc-preview">Was Strom mit dem Körper macht.</div>
-  <span class="tc-tag" style="background:#ff980022;color:#ff9800;border-color:#ff980044">⚠️ Sicherheit</span>
+  <span class="tc-tag" style="background:#ff980022;color:#ff9800;border-color:#ff980044">Sicherheit</span>
 </div>
 <div class="tc" onclick="showTopic(96)" data-cat="6" 
   data-title="erste hilfe bei stromunfall" data-preview="richtig handeln rettet leben.">
   <div class="tc-num" style="color:#ff9800">96</div>
   <div class="tc-title">Erste Hilfe bei Stromunfall</div>
   <div class="tc-preview">Richtig handeln rettet Leben.</div>
-  <span class="tc-tag" style="background:#ff980022;color:#ff9800;border-color:#ff980044">⚠️ Sicherheit</span>
+  <span class="tc-tag" style="background:#ff980022;color:#ff9800;border-color:#ff980044">Sicherheit</span>
 </div>
 <div class="tc" onclick="showTopic(97)" data-cat="6" 
   data-title="schutztrennung" data-preview="galvanische trennung als schutz.">
   <div class="tc-num" style="color:#ff9800">97</div>
   <div class="tc-title">Schutztrennung</div>
   <div class="tc-preview">Galvanische Trennung als Schutz.</div>
-  <span class="tc-tag" style="background:#ff980022;color:#ff9800;border-color:#ff980044">⚠️ Sicherheit</span>
+  <span class="tc-tag" style="background:#ff980022;color:#ff9800;border-color:#ff980044">Sicherheit</span>
 </div>
 <div class="tc" onclick="showTopic(98)" data-cat="6" 
   data-title="fehlerstrom" data-preview="wenn strom einen unerwünschten weg geht.">
   <div class="tc-num" style="color:#ff9800">98</div>
   <div class="tc-title">Fehlerstrom</div>
   <div class="tc-preview">Wenn Strom einen unerwünschten Weg geht.</div>
-  <span class="tc-tag" style="background:#ff980022;color:#ff9800;border-color:#ff980044">⚠️ Sicherheit</span>
+  <span class="tc-tag" style="background:#ff980022;color:#ff9800;border-color:#ff980044">Sicherheit</span>
 </div>
 <div class="tc" onclick="showTopic(99)" data-cat="6" 
   data-title="messungen & prüfungen" data-preview="prüfungen nach vde 0100-600.">
   <div class="tc-num" style="color:#ff9800">99</div>
   <div class="tc-title">Messungen & Prüfungen</div>
   <div class="tc-preview">Prüfungen nach VDE 0100-600.</div>
-  <span class="tc-tag" style="background:#ff980022;color:#ff9800;border-color:#ff980044">⚠️ Sicherheit</span>
+  <span class="tc-tag" style="background:#ff980022;color:#ff9800;border-color:#ff980044">Sicherheit</span>
 </div>
 <div class="tc" onclick="showTopic(100)" data-cat="6" 
   data-title="dokumentation" data-preview="was nicht dokumentiert ist, existiert nicht.">
   <div class="tc-num" style="color:#ff9800">100</div>
   <div class="tc-title">Dokumentation</div>
   <div class="tc-preview">Was nicht dokumentiert ist, existiert nicht.</div>
-  <span class="tc-tag" style="background:#ff980022;color:#ff9800;border-color:#ff980044">⚠️ Sicherheit</span>
+  <span class="tc-tag" style="background:#ff980022;color:#ff9800;border-color:#ff980044">Sicherheit</span>
 </div>
 </div>
 
@@ -914,7 +914,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#4fc3f7">01</span>
-      <span class="td-cat" style="color:#4fc3f7">⚡ Grundlagen</span>
+      <span class="td-cat" style="color:#4fc3f7">Grundlagen</span>
     </div>
     <h1 class="td-title">Elektrische Spannung (U)</h1>
     <p class="td-preview">Was treibt den Strom an?</p>
@@ -973,7 +973,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#4fc3f7">02</span>
-      <span class="td-cat" style="color:#4fc3f7">⚡ Grundlagen</span>
+      <span class="td-cat" style="color:#4fc3f7">Grundlagen</span>
     </div>
     <h1 class="td-title">Elektrischer Strom (I)</h1>
     <p class="td-preview">Elektronen in Bewegung.</p>
@@ -1031,7 +1031,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#4fc3f7">03</span>
-      <span class="td-cat" style="color:#4fc3f7">⚡ Grundlagen</span>
+      <span class="td-cat" style="color:#4fc3f7">Grundlagen</span>
     </div>
     <h1 class="td-title">Elektrischer Widerstand (R)</h1>
     <p class="td-preview">Warum fließt nicht immer gleich viel Strom?</p>
@@ -1056,7 +1056,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#4fc3f7">04</span>
-      <span class="td-cat" style="color:#4fc3f7">⚡ Grundlagen</span>
+      <span class="td-cat" style="color:#4fc3f7">Grundlagen</span>
     </div>
     <h1 class="td-title">Ohmsches Gesetz</h1>
     <p class="td-preview">Die wichtigste Formel der Elektrotechnik.</p>
@@ -1082,7 +1082,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#4fc3f7">05</span>
-      <span class="td-cat" style="color:#4fc3f7">⚡ Grundlagen</span>
+      <span class="td-cat" style="color:#4fc3f7">Grundlagen</span>
     </div>
     <h1 class="td-title">Kirchhoffsche Gesetze</h1>
     <p class="td-preview">Knotenregel & Maschenregel.</p>
@@ -1109,7 +1109,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#4fc3f7">06</span>
-      <span class="td-cat" style="color:#4fc3f7">⚡ Grundlagen</span>
+      <span class="td-cat" style="color:#4fc3f7">Grundlagen</span>
     </div>
     <h1 class="td-title">Leistung (P)</h1>
     <p class="td-preview">Energie pro Zeiteinheit.</p>
@@ -1135,7 +1135,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#4fc3f7">07</span>
-      <span class="td-cat" style="color:#4fc3f7">⚡ Grundlagen</span>
+      <span class="td-cat" style="color:#4fc3f7">Grundlagen</span>
     </div>
     <h1 class="td-title">Arbeit und Energie</h1>
     <p class="td-preview">Was kostet dein Strom wirklich?</p>
@@ -1160,7 +1160,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#4fc3f7">08</span>
-      <span class="td-cat" style="color:#4fc3f7">⚡ Grundlagen</span>
+      <span class="td-cat" style="color:#4fc3f7">Grundlagen</span>
     </div>
     <h1 class="td-title">Gleichstrom (DC)</h1>
     <p class="td-preview">Konstante Richtung, konstante Stärke.</p>
@@ -1184,7 +1184,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#4fc3f7">09</span>
-      <span class="td-cat" style="color:#4fc3f7">⚡ Grundlagen</span>
+      <span class="td-cat" style="color:#4fc3f7">Grundlagen</span>
     </div>
     <h1 class="td-title">Wechselstrom (AC)</h1>
     <p class="td-preview">50 Hz, 230 V — was steckt dahinter?</p>
@@ -1209,7 +1209,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#4fc3f7">10</span>
-      <span class="td-cat" style="color:#4fc3f7">⚡ Grundlagen</span>
+      <span class="td-cat" style="color:#4fc3f7">Grundlagen</span>
     </div>
     <h1 class="td-title">Frequenz</h1>
     <p class="td-preview">Schwingungen pro Sekunde.</p>
@@ -1233,7 +1233,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#4fc3f7">11</span>
-      <span class="td-cat" style="color:#4fc3f7">⚡ Grundlagen</span>
+      <span class="td-cat" style="color:#4fc3f7">Grundlagen</span>
     </div>
     <h1 class="td-title">Periodendauer</h1>
     <p class="td-preview">Zeit für eine vollständige Schwingung.</p>
@@ -1257,7 +1257,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#4fc3f7">12</span>
-      <span class="td-cat" style="color:#4fc3f7">⚡ Grundlagen</span>
+      <span class="td-cat" style="color:#4fc3f7">Grundlagen</span>
     </div>
     <h1 class="td-title">Effektivwert</h1>
     <p class="td-preview">230V — aber der Strom ist manchmal 325V hoch!</p>
@@ -1282,7 +1282,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#4fc3f7">13</span>
-      <span class="td-cat" style="color:#4fc3f7">⚡ Grundlagen</span>
+      <span class="td-cat" style="color:#4fc3f7">Grundlagen</span>
     </div>
     <h1 class="td-title">Spitze-Spitze-Wert</h1>
     <p class="td-preview">Von Minus- bis Plusspitze.</p>
@@ -1307,7 +1307,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#4fc3f7">14</span>
-      <span class="td-cat" style="color:#4fc3f7">⚡ Grundlagen</span>
+      <span class="td-cat" style="color:#4fc3f7">Grundlagen</span>
     </div>
     <h1 class="td-title">Phasenverschiebung</h1>
     <p class="td-preview">Wenn Spannung und Strom zeitlich versetzt sind.</p>
@@ -1332,7 +1332,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#4fc3f7">15</span>
-      <span class="td-cat" style="color:#4fc3f7">⚡ Grundlagen</span>
+      <span class="td-cat" style="color:#4fc3f7">Grundlagen</span>
     </div>
     <h1 class="td-title">Blindleistung</h1>
     <p class="td-preview">Leistung die pendelt aber keine Arbeit verrichtet.</p>
@@ -1356,7 +1356,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#4fc3f7">16</span>
-      <span class="td-cat" style="color:#4fc3f7">⚡ Grundlagen</span>
+      <span class="td-cat" style="color:#4fc3f7">Grundlagen</span>
     </div>
     <h1 class="td-title">Scheinleistung</h1>
     <p class="td-preview">Die gesamte Netzbelastung.</p>
@@ -1381,7 +1381,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#4fc3f7">17</span>
-      <span class="td-cat" style="color:#4fc3f7">⚡ Grundlagen</span>
+      <span class="td-cat" style="color:#4fc3f7">Grundlagen</span>
     </div>
     <h1 class="td-title">Wirkleistung</h1>
     <p class="td-preview">Die Leistung die wirklich Arbeit verrichtet.</p>
@@ -1405,7 +1405,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#4fc3f7">18</span>
-      <span class="td-cat" style="color:#4fc3f7">⚡ Grundlagen</span>
+      <span class="td-cat" style="color:#4fc3f7">Grundlagen</span>
     </div>
     <h1 class="td-title">Leistungsfaktor (cos φ)</h1>
     <p class="td-preview">Effizienz der Energienutzung.</p>
@@ -1428,7 +1428,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#4fc3f7">19</span>
-      <span class="td-cat" style="color:#4fc3f7">⚡ Grundlagen</span>
+      <span class="td-cat" style="color:#4fc3f7">Grundlagen</span>
     </div>
     <h1 class="td-title">Elektrische Ladung</h1>
     <p class="td-preview">Die Grundgröße der Elektrizität.</p>
@@ -1452,7 +1452,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#4fc3f7">20</span>
-      <span class="td-cat" style="color:#4fc3f7">⚡ Grundlagen</span>
+      <span class="td-cat" style="color:#4fc3f7">Grundlagen</span>
     </div>
     <h1 class="td-title">Leitfähigkeit</h1>
     <p class="td-preview">Das Gegenteil des Widerstands.</p>
@@ -1477,7 +1477,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#00D084">21</span>
-      <span class="td-cat" style="color:#00D084">🔌 Bauteile</span>
+      <span class="td-cat" style="color:#00D084">Bauteile</span>
     </div>
     <h1 class="td-title">Widerstände</h1>
     <p class="td-preview">Farbcode, Arten & Kennzeichnung.</p>
@@ -1502,7 +1502,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#00D084">22</span>
-      <span class="td-cat" style="color:#00D084">🔌 Bauteile</span>
+      <span class="td-cat" style="color:#00D084">Bauteile</span>
     </div>
     <h1 class="td-title">Kondensatoren</h1>
     <p class="td-preview">Energiespeicher im elektrischen Feld.</p>
@@ -1526,7 +1526,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#00D084">23</span>
-      <span class="td-cat" style="color:#00D084">🔌 Bauteile</span>
+      <span class="td-cat" style="color:#00D084">Bauteile</span>
     </div>
     <h1 class="td-title">Spulen (Induktivität)</h1>
     <p class="td-preview">Energie im Magnetfeld.</p>
@@ -1550,7 +1550,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#00D084">24</span>
-      <span class="td-cat" style="color:#00D084">🔌 Bauteile</span>
+      <span class="td-cat" style="color:#00D084">Bauteile</span>
     </div>
     <h1 class="td-title">Transformator</h1>
     <p class="td-preview">Spannung hoch- oder runtertransformieren.</p>
@@ -1574,7 +1574,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#00D084">25</span>
-      <span class="td-cat" style="color:#00D084">🔌 Bauteile</span>
+      <span class="td-cat" style="color:#00D084">Bauteile</span>
     </div>
     <h1 class="td-title">Relais</h1>
     <p class="td-preview">Kleiner Strom schaltet großen Strom.</p>
@@ -1599,7 +1599,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#00D084">26</span>
-      <span class="td-cat" style="color:#00D084">🔌 Bauteile</span>
+      <span class="td-cat" style="color:#00D084">Bauteile</span>
     </div>
     <h1 class="td-title">Schütz</h1>
     <p class="td-preview">Das Kraftrelais für Motoren.</p>
@@ -1624,7 +1624,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#00D084">27</span>
-      <span class="td-cat" style="color:#00D084">🔌 Bauteile</span>
+      <span class="td-cat" style="color:#00D084">Bauteile</span>
     </div>
     <h1 class="td-title">Sicherungen</h1>
     <p class="td-preview">Einmal und nie wieder.</p>
@@ -1647,7 +1647,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#00D084">28</span>
-      <span class="td-cat" style="color:#00D084">🔌 Bauteile</span>
+      <span class="td-cat" style="color:#00D084">Bauteile</span>
     </div>
     <h1 class="td-title">Leitungsschutzschalter</h1>
     <p class="td-preview">B, C, D — die Auslösecharakteristiken.</p>
@@ -1672,7 +1672,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#00D084">29</span>
-      <span class="td-cat" style="color:#00D084">🔌 Bauteile</span>
+      <span class="td-cat" style="color:#00D084">Bauteile</span>
     </div>
     <h1 class="td-title">FI-Schalter (RCD)</h1>
     <p class="td-preview">Lebensretter — 30mA genügen.</p>
@@ -1697,7 +1697,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#00D084">30</span>
-      <span class="td-cat" style="color:#00D084">🔌 Bauteile</span>
+      <span class="td-cat" style="color:#00D084">Bauteile</span>
     </div>
     <h1 class="td-title">Halbleiter</h1>
     <p class="td-preview">Das Fundament moderner Elektronik.</p>
@@ -1721,7 +1721,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#00D084">31</span>
-      <span class="td-cat" style="color:#00D084">🔌 Bauteile</span>
+      <span class="td-cat" style="color:#00D084">Bauteile</span>
     </div>
     <h1 class="td-title">Diode</h1>
     <p class="td-preview">Strom nur in eine Richtung.</p>
@@ -1744,7 +1744,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#00D084">32</span>
-      <span class="td-cat" style="color:#00D084">🔌 Bauteile</span>
+      <span class="td-cat" style="color:#00D084">Bauteile</span>
     </div>
     <h1 class="td-title">Zenerdiode</h1>
     <p class="td-preview">Spannungsreferenz und Schutz.</p>
@@ -1765,7 +1765,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#00D084">33</span>
-      <span class="td-cat" style="color:#00D084">🔌 Bauteile</span>
+      <span class="td-cat" style="color:#00D084">Bauteile</span>
     </div>
     <h1 class="td-title">Transistor</h1>
     <p class="td-preview">Schalter und Verstärker.</p>
@@ -1785,7 +1785,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#00D084">34</span>
-      <span class="td-cat" style="color:#00D084">🔌 Bauteile</span>
+      <span class="td-cat" style="color:#00D084">Bauteile</span>
     </div>
     <h1 class="td-title">Thyristor</h1>
     <p class="td-preview">Einschalten ja — ausschalten nur durch Nulldurchgang.</p>
@@ -1805,7 +1805,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#00D084">35</span>
-      <span class="td-cat" style="color:#00D084">🔌 Bauteile</span>
+      <span class="td-cat" style="color:#00D084">Bauteile</span>
     </div>
     <h1 class="td-title">Gleichrichter</h1>
     <p class="td-preview">Aus Wechselstrom wird Gleichstrom.</p>
@@ -1825,7 +1825,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#00D084">36</span>
-      <span class="td-cat" style="color:#00D084">🔌 Bauteile</span>
+      <span class="td-cat" style="color:#00D084">Bauteile</span>
     </div>
     <h1 class="td-title">LED</h1>
     <p class="td-preview">Licht aus dem Halbleiter.</p>
@@ -1845,7 +1845,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#00D084">37</span>
-      <span class="td-cat" style="color:#00D084">🔌 Bauteile</span>
+      <span class="td-cat" style="color:#00D084">Bauteile</span>
     </div>
     <h1 class="td-title">Sensoren</h1>
     <p class="td-preview">Die Sinne der Anlage.</p>
@@ -1865,7 +1865,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#00D084">38</span>
-      <span class="td-cat" style="color:#00D084">🔌 Bauteile</span>
+      <span class="td-cat" style="color:#00D084">Bauteile</span>
     </div>
     <h1 class="td-title">Taster & Schalter</h1>
     <p class="td-preview">Der Unterschied und wann man was verwendet.</p>
@@ -1885,7 +1885,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#00D084">39</span>
-      <span class="td-cat" style="color:#00D084">🔌 Bauteile</span>
+      <span class="td-cat" style="color:#00D084">Bauteile</span>
     </div>
     <h1 class="td-title">Steckdosen</h1>
     <p class="td-preview">Mehr als nur ein Loch in der Wand.</p>
@@ -1905,7 +1905,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#00D084">40</span>
-      <span class="td-cat" style="color:#00D084">🔌 Bauteile</span>
+      <span class="td-cat" style="color:#00D084">Bauteile</span>
     </div>
     <h1 class="td-title">Verteilungen</h1>
     <p class="td-preview">Unterverteilung planen und aufbauen.</p>
@@ -1925,7 +1925,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#f5a623">41</span>
-      <span class="td-cat" style="color:#f5a623">🏠 Installation</span>
+      <span class="td-cat" style="color:#f5a623">Installation</span>
     </div>
     <h1 class="td-title">Leitungsverlegung</h1>
     <p class="td-preview">Regeln für sichere Kabelverlegung.</p>
@@ -1945,7 +1945,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#f5a623">42</span>
-      <span class="td-cat" style="color:#f5a623">🏠 Installation</span>
+      <span class="td-cat" style="color:#f5a623">Installation</span>
     </div>
     <h1 class="td-title">Verlegearten</h1>
     <p class="td-preview">A1, B2, C — Einfluss auf Strombelastbarkeit.</p>
@@ -1965,7 +1965,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#f5a623">43</span>
-      <span class="td-cat" style="color:#f5a623">🏠 Installation</span>
+      <span class="td-cat" style="color:#f5a623">Installation</span>
     </div>
     <h1 class="td-title">Kabelarten</h1>
     <p class="td-preview">NYM, NYY, H07RN-F — was steckt dahinter?</p>
@@ -1985,7 +1985,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#f5a623">44</span>
-      <span class="td-cat" style="color:#f5a623">🏠 Installation</span>
+      <span class="td-cat" style="color:#f5a623">Installation</span>
     </div>
     <h1 class="td-title">Schutzmaßnahmen</h1>
     <p class="td-preview">Drei Ebenen des Schutzes gegen elektrischen Schlag.</p>
@@ -2005,7 +2005,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#f5a623">45</span>
-      <span class="td-cat" style="color:#f5a623">🏠 Installation</span>
+      <span class="td-cat" style="color:#f5a623">Installation</span>
     </div>
     <h1 class="td-title">Schutzklassen</h1>
     <p class="td-preview">SK I, SK II, SK III.</p>
@@ -2025,7 +2025,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#f5a623">46</span>
-      <span class="td-cat" style="color:#f5a623">🏠 Installation</span>
+      <span class="td-cat" style="color:#f5a623">Installation</span>
     </div>
     <h1 class="td-title">IP-Schutzarten</h1>
     <p class="td-preview">IP44, IP65, IP68.</p>
@@ -2045,7 +2045,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#f5a623">47</span>
-      <span class="td-cat" style="color:#f5a623">🏠 Installation</span>
+      <span class="td-cat" style="color:#f5a623">Installation</span>
     </div>
     <h1 class="td-title">Erdungssysteme</h1>
     <p class="td-preview">TN-S, TN-C, TT, IT.</p>
@@ -2065,7 +2065,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#f5a623">48</span>
-      <span class="td-cat" style="color:#f5a623">🏠 Installation</span>
+      <span class="td-cat" style="color:#f5a623">Installation</span>
     </div>
     <h1 class="td-title">Potentialausgleich</h1>
     <p class="td-preview">Alle leitfähigen Teile verbinden.</p>
@@ -2085,7 +2085,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#f5a623">49</span>
-      <span class="td-cat" style="color:#f5a623">🏠 Installation</span>
+      <span class="td-cat" style="color:#f5a623">Installation</span>
     </div>
     <h1 class="td-title">Kurzschluss</h1>
     <p class="td-preview">Was passiert wenn L auf N trifft?</p>
@@ -2105,7 +2105,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#f5a623">50</span>
-      <span class="td-cat" style="color:#f5a623">🏠 Installation</span>
+      <span class="td-cat" style="color:#f5a623">Installation</span>
     </div>
     <h1 class="td-title">Überlast</h1>
     <p class="td-preview">Zu viel Strom für zu dünne Leitung.</p>
@@ -2125,7 +2125,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#f5a623">51</span>
-      <span class="td-cat" style="color:#f5a623">🏠 Installation</span>
+      <span class="td-cat" style="color:#f5a623">Installation</span>
     </div>
     <h1 class="td-title">Selektivität</h1>
     <p class="td-preview">Nur die richtige Sicherung löst aus.</p>
@@ -2145,7 +2145,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#f5a623">52</span>
-      <span class="td-cat" style="color:#f5a623">🏠 Installation</span>
+      <span class="td-cat" style="color:#f5a623">Installation</span>
     </div>
     <h1 class="td-title">Spannungsfall</h1>
     <p class="td-preview">Der Leitungswiderstand kostet Spannung.</p>
@@ -2165,7 +2165,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#f5a623">53</span>
-      <span class="td-cat" style="color:#f5a623">🏠 Installation</span>
+      <span class="td-cat" style="color:#f5a623">Installation</span>
     </div>
     <h1 class="td-title">Leitungsdimensionierung</h1>
     <p class="td-preview">Welcher Querschnitt für welchen Strom?</p>
@@ -2185,7 +2185,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#f5a623">54</span>
-      <span class="td-cat" style="color:#f5a623">🏠 Installation</span>
+      <span class="td-cat" style="color:#f5a623">Installation</span>
     </div>
     <h1 class="td-title">Unterverteilung aufbauen</h1>
     <p class="td-preview">Schritt für Schritt.</p>
@@ -2205,7 +2205,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#f5a623">55</span>
-      <span class="td-cat" style="color:#f5a623">🏠 Installation</span>
+      <span class="td-cat" style="color:#f5a623">Installation</span>
     </div>
     <h1 class="td-title">Stromkreisarten</h1>
     <p class="td-preview">Licht, Steckdosen, Sonderstromkreise.</p>
@@ -2225,7 +2225,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#f5a623">56</span>
-      <span class="td-cat" style="color:#f5a623">🏠 Installation</span>
+      <span class="td-cat" style="color:#f5a623">Installation</span>
     </div>
     <h1 class="td-title">Drehstromsystem</h1>
     <p class="td-preview">Drei Phasen, 120° versetzt.</p>
@@ -2245,7 +2245,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#f5a623">57</span>
-      <span class="td-cat" style="color:#f5a623">🏠 Installation</span>
+      <span class="td-cat" style="color:#f5a623">Installation</span>
     </div>
     <h1 class="td-title">Neutralleiter & Schutzleiter</h1>
     <p class="td-preview">N ist blau, PE ist grün-gelb.</p>
@@ -2265,7 +2265,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#f5a623">58</span>
-      <span class="td-cat" style="color:#f5a623">🏠 Installation</span>
+      <span class="td-cat" style="color:#f5a623">Installation</span>
     </div>
     <h1 class="td-title">PEN-Leiter</h1>
     <p class="td-preview">PE und N in einem — nur ältere Anlagen.</p>
@@ -2285,7 +2285,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#f5a623">59</span>
-      <span class="td-cat" style="color:#f5a623">🏠 Installation</span>
+      <span class="td-cat" style="color:#f5a623">Installation</span>
     </div>
     <h1 class="td-title">Installationszonen</h1>
     <p class="td-preview">Wo darf ich Leitungen in der Wand verlegen?</p>
@@ -2305,7 +2305,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#f5a623">60</span>
-      <span class="td-cat" style="color:#f5a623">🏠 Installation</span>
+      <span class="td-cat" style="color:#f5a623">Installation</span>
     </div>
     <h1 class="td-title">Unterputz / Aufputz</h1>
     <p class="td-preview">UP vs AP.</p>
@@ -2325,7 +2325,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#FF5A5A">61</span>
-      <span class="td-cat" style="color:#FF5A5A">⚙️ Maschinen</span>
+      <span class="td-cat" style="color:#FF5A5A">Maschinen</span>
     </div>
     <h1 class="td-title">Elektromotoren</h1>
     <p class="td-preview">Strom wird Drehbewegung.</p>
@@ -2345,7 +2345,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#FF5A5A">62</span>
-      <span class="td-cat" style="color:#FF5A5A">⚙️ Maschinen</span>
+      <span class="td-cat" style="color:#FF5A5A">Maschinen</span>
     </div>
     <h1 class="td-title">Asynchronmotor</h1>
     <p class="td-preview">Der Arbeitspferd der Industrie.</p>
@@ -2365,7 +2365,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#FF5A5A">63</span>
-      <span class="td-cat" style="color:#FF5A5A">⚙️ Maschinen</span>
+      <span class="td-cat" style="color:#FF5A5A">Maschinen</span>
     </div>
     <h1 class="td-title">Synchronmotor</h1>
     <p class="td-preview">Dreht exakt mit dem Netz.</p>
@@ -2385,7 +2385,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#FF5A5A">64</span>
-      <span class="td-cat" style="color:#FF5A5A">⚙️ Maschinen</span>
+      <span class="td-cat" style="color:#FF5A5A">Maschinen</span>
     </div>
     <h1 class="td-title">Drehfeld</h1>
     <p class="td-preview">Warum dreht der Motor?</p>
@@ -2405,7 +2405,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#FF5A5A">65</span>
-      <span class="td-cat" style="color:#FF5A5A">⚙️ Maschinen</span>
+      <span class="td-cat" style="color:#FF5A5A">Maschinen</span>
     </div>
     <h1 class="td-title">Stern-Dreieck-Schaltung</h1>
     <p class="td-preview">Anlaufstrom auf 1/3 reduzieren.</p>
@@ -2425,7 +2425,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#FF5A5A">66</span>
-      <span class="td-cat" style="color:#FF5A5A">⚙️ Maschinen</span>
+      <span class="td-cat" style="color:#FF5A5A">Maschinen</span>
     </div>
     <h1 class="td-title">Motorschutz</h1>
     <p class="td-preview">Überhitzung und Kurzschluss verhindern.</p>
@@ -2445,7 +2445,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#FF5A5A">67</span>
-      <span class="td-cat" style="color:#FF5A5A">⚙️ Maschinen</span>
+      <span class="td-cat" style="color:#FF5A5A">Maschinen</span>
     </div>
     <h1 class="td-title">Frequenzumrichter</h1>
     <p class="td-preview">Drehzahl stufenlos regeln.</p>
@@ -2465,7 +2465,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#FF5A5A">68</span>
-      <span class="td-cat" style="color:#FF5A5A">⚙️ Maschinen</span>
+      <span class="td-cat" style="color:#FF5A5A">Maschinen</span>
     </div>
     <h1 class="td-title">Generator</h1>
     <p class="td-preview">Bewegung wird zu Strom.</p>
@@ -2485,7 +2485,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#FF5A5A">69</span>
-      <span class="td-cat" style="color:#FF5A5A">⚙️ Maschinen</span>
+      <span class="td-cat" style="color:#FF5A5A">Maschinen</span>
     </div>
     <h1 class="td-title">Transformator-Prinzip</h1>
     <p class="td-preview">Magnetfelder als Energieüberträger.</p>
@@ -2505,7 +2505,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#FF5A5A">70</span>
-      <span class="td-cat" style="color:#FF5A5A">⚙️ Maschinen</span>
+      <span class="td-cat" style="color:#FF5A5A">Maschinen</span>
     </div>
     <h1 class="td-title">Wirkungsgrad Maschinen</h1>
     <p class="td-preview">Wie viel Energie geht verloren?</p>
@@ -2525,7 +2525,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#FF5A5A">71</span>
-      <span class="td-cat" style="color:#FF5A5A">⚙️ Maschinen</span>
+      <span class="td-cat" style="color:#FF5A5A">Maschinen</span>
     </div>
     <h1 class="td-title">Anlaufverfahren</h1>
     <p class="td-preview">Sanft starten schützt Motor und Netz.</p>
@@ -2545,7 +2545,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#FF5A5A">72</span>
-      <span class="td-cat" style="color:#FF5A5A">⚙️ Maschinen</span>
+      <span class="td-cat" style="color:#FF5A5A">Maschinen</span>
     </div>
     <h1 class="td-title">Drehrichtungsumkehr</h1>
     <p class="td-preview">Einfach zwei Phasen tauschen.</p>
@@ -2565,7 +2565,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#FF5A5A">73</span>
-      <span class="td-cat" style="color:#FF5A5A">⚙️ Maschinen</span>
+      <span class="td-cat" style="color:#FF5A5A">Maschinen</span>
     </div>
     <h1 class="td-title">Motorsteuerungen</h1>
     <p class="td-preview">Direkt, Stern-Dreieck, Wendeschütz.</p>
@@ -2585,7 +2585,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#FF5A5A">74</span>
-      <span class="td-cat" style="color:#FF5A5A">⚙️ Maschinen</span>
+      <span class="td-cat" style="color:#FF5A5A">Maschinen</span>
     </div>
     <h1 class="td-title">Bremsen von Motoren</h1>
     <p class="td-preview">Schnell stoppen ohne mechanische Bremse.</p>
@@ -2605,7 +2605,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#FF5A5A">75</span>
-      <span class="td-cat" style="color:#FF5A5A">⚙️ Maschinen</span>
+      <span class="td-cat" style="color:#FF5A5A">Maschinen</span>
     </div>
     <h1 class="td-title">Lastarten</h1>
     <p class="td-preview">Welche Lastcharakteristik hat welche Maschine?</p>
@@ -2625,7 +2625,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#B24BF3">76</span>
-      <span class="td-cat" style="color:#B24BF3">🧠 Steuerung</span>
+      <span class="td-cat" style="color:#B24BF3">Steuerung</span>
     </div>
     <h1 class="td-title">SPS</h1>
     <p class="td-preview">Das Gehirn moderner Anlagen.</p>
@@ -2645,7 +2645,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#B24BF3">77</span>
-      <span class="td-cat" style="color:#B24BF3">🧠 Steuerung</span>
+      <span class="td-cat" style="color:#B24BF3">Steuerung</span>
     </div>
     <h1 class="td-title">LOGO! Steuerung</h1>
     <p class="td-preview">SPS für kleine Automatisierungsaufgaben.</p>
@@ -2665,7 +2665,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#B24BF3">78</span>
-      <span class="td-cat" style="color:#B24BF3">🧠 Steuerung</span>
+      <span class="td-cat" style="color:#B24BF3">Steuerung</span>
     </div>
     <h1 class="td-title">Digitale Signale</h1>
     <p class="td-preview">0 oder 1 — kein Dazwischen.</p>
@@ -2685,7 +2685,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#B24BF3">79</span>
-      <span class="td-cat" style="color:#B24BF3">🧠 Steuerung</span>
+      <span class="td-cat" style="color:#B24BF3">Steuerung</span>
     </div>
     <h1 class="td-title">Analoge Signale</h1>
     <p class="td-preview">Stufenlose Werte.</p>
@@ -2705,7 +2705,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#B24BF3">80</span>
-      <span class="td-cat" style="color:#B24BF3">🧠 Steuerung</span>
+      <span class="td-cat" style="color:#B24BF3">Steuerung</span>
     </div>
     <h1 class="td-title">Sensor-Aktor-Prinzip</h1>
     <p class="td-preview">Erfassen → Verarbeiten → Ausgeben.</p>
@@ -2725,7 +2725,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#B24BF3">81</span>
-      <span class="td-cat" style="color:#B24BF3">🧠 Steuerung</span>
+      <span class="td-cat" style="color:#B24BF3">Steuerung</span>
     </div>
     <h1 class="td-title">Zeitrelais</h1>
     <p class="td-preview">Verzögertes Schalten.</p>
@@ -2745,7 +2745,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#B24BF3">82</span>
-      <span class="td-cat" style="color:#B24BF3">🧠 Steuerung</span>
+      <span class="td-cat" style="color:#B24BF3">Steuerung</span>
     </div>
     <h1 class="td-title">Schützsteuerung</h1>
     <p class="td-preview">Der Klassiker der Industrieautomation.</p>
@@ -2765,7 +2765,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#B24BF3">83</span>
-      <span class="td-cat" style="color:#B24BF3">🧠 Steuerung</span>
+      <span class="td-cat" style="color:#B24BF3">Steuerung</span>
     </div>
     <h1 class="td-title">Selbsthaltung</h1>
     <p class="td-preview">Motor läuft weiter ohne Finger am Taster.</p>
@@ -2785,7 +2785,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#B24BF3">84</span>
-      <span class="td-cat" style="color:#B24BF3">🧠 Steuerung</span>
+      <span class="td-cat" style="color:#B24BF3">Steuerung</span>
     </div>
     <h1 class="td-title">Verriegelung</h1>
     <p class="td-preview">Zwei Schütze dürfen nie gleichzeitig schalten.</p>
@@ -2805,7 +2805,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#B24BF3">85</span>
-      <span class="td-cat" style="color:#B24BF3">🧠 Steuerung</span>
+      <span class="td-cat" style="color:#B24BF3">Steuerung</span>
     </div>
     <h1 class="td-title">Stromlaufplan lesen</h1>
     <p class="td-preview">Strom fließt von + nach −.</p>
@@ -2825,7 +2825,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#B24BF3">86</span>
-      <span class="td-cat" style="color:#B24BF3">🧠 Steuerung</span>
+      <span class="td-cat" style="color:#B24BF3">Steuerung</span>
     </div>
     <h1 class="td-title">Funktionsplan (FUP)</h1>
     <p class="td-preview">SPS-Programmierung grafisch.</p>
@@ -2845,7 +2845,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#B24BF3">87</span>
-      <span class="td-cat" style="color:#B24BF3">🧠 Steuerung</span>
+      <span class="td-cat" style="color:#B24BF3">Steuerung</span>
     </div>
     <h1 class="td-title">Kontaktplan (KOP)</h1>
     <p class="td-preview">Wie ein Stromlaufplan — für die SPS.</p>
@@ -2865,7 +2865,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#B24BF3">88</span>
-      <span class="td-cat" style="color:#B24BF3">🧠 Steuerung</span>
+      <span class="td-cat" style="color:#B24BF3">Steuerung</span>
     </div>
     <h1 class="td-title">Ablaufsteuerung</h1>
     <p class="td-preview">Schritt für Schritt durch den Prozess.</p>
@@ -2885,7 +2885,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#B24BF3">89</span>
-      <span class="td-cat" style="color:#B24BF3">🧠 Steuerung</span>
+      <span class="td-cat" style="color:#B24BF3">Steuerung</span>
     </div>
     <h1 class="td-title">Bussysteme</h1>
     <p class="td-preview">KNX, Profibus, EtherNet/IP.</p>
@@ -2905,7 +2905,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#B24BF3">90</span>
-      <span class="td-cat" style="color:#B24BF3">🧠 Steuerung</span>
+      <span class="td-cat" style="color:#B24BF3">Steuerung</span>
     </div>
     <h1 class="td-title">Smart Home</h1>
     <p class="td-preview">KNX, DALI, Matter.</p>
@@ -2925,7 +2925,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#ff9800">91</span>
-      <span class="td-cat" style="color:#ff9800">⚠️ Sicherheit</span>
+      <span class="td-cat" style="color:#ff9800">Sicherheit</span>
     </div>
     <h1 class="td-title">DIN VDE Vorschriften</h1>
     <p class="td-preview">Das Regelwerk des Elektriker-Berufs.</p>
@@ -2945,7 +2945,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#ff9800">92</span>
-      <span class="td-cat" style="color:#ff9800">⚠️ Sicherheit</span>
+      <span class="td-cat" style="color:#ff9800">Sicherheit</span>
     </div>
     <h1 class="td-title">5 Sicherheitsregeln</h1>
     <p class="td-preview">Niemals vergessen — dein Leben hängt davon ab.</p>
@@ -2965,7 +2965,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#ff9800">93</span>
-      <span class="td-cat" style="color:#ff9800">⚠️ Sicherheit</span>
+      <span class="td-cat" style="color:#ff9800">Sicherheit</span>
     </div>
     <h1 class="td-title">Arbeiten unter Spannung</h1>
     <p class="td-preview">AuS — nur mit Sonderausbildung!</p>
@@ -2985,7 +2985,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#ff9800">94</span>
-      <span class="td-cat" style="color:#ff9800">⚠️ Sicherheit</span>
+      <span class="td-cat" style="color:#ff9800">Sicherheit</span>
     </div>
     <h1 class="td-title">PSA</h1>
     <p class="td-preview">Persönliche Schutzausrüstung.</p>
@@ -3005,7 +3005,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#ff9800">95</span>
-      <span class="td-cat" style="color:#ff9800">⚠️ Sicherheit</span>
+      <span class="td-cat" style="color:#ff9800">Sicherheit</span>
     </div>
     <h1 class="td-title">Gefahren des elektrischen Stroms</h1>
     <p class="td-preview">Was Strom mit dem Körper macht.</p>
@@ -3025,7 +3025,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#ff9800">96</span>
-      <span class="td-cat" style="color:#ff9800">⚠️ Sicherheit</span>
+      <span class="td-cat" style="color:#ff9800">Sicherheit</span>
     </div>
     <h1 class="td-title">Erste Hilfe bei Stromunfall</h1>
     <p class="td-preview">Richtig handeln rettet Leben.</p>
@@ -3045,7 +3045,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#ff9800">97</span>
-      <span class="td-cat" style="color:#ff9800">⚠️ Sicherheit</span>
+      <span class="td-cat" style="color:#ff9800">Sicherheit</span>
     </div>
     <h1 class="td-title">Schutztrennung</h1>
     <p class="td-preview">Galvanische Trennung als Schutz.</p>
@@ -3065,7 +3065,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#ff9800">98</span>
-      <span class="td-cat" style="color:#ff9800">⚠️ Sicherheit</span>
+      <span class="td-cat" style="color:#ff9800">Sicherheit</span>
     </div>
     <h1 class="td-title">Fehlerstrom</h1>
     <p class="td-preview">Wenn Strom einen unerwünschten Weg geht.</p>
@@ -3085,7 +3085,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#ff9800">99</span>
-      <span class="td-cat" style="color:#ff9800">⚠️ Sicherheit</span>
+      <span class="td-cat" style="color:#ff9800">Sicherheit</span>
     </div>
     <h1 class="td-title">Messungen & Prüfungen</h1>
     <p class="td-preview">Prüfungen nach VDE 0100-600.</p>
@@ -3105,7 +3105,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
     <button class="back-btn" onclick="showGrid()">← Zurück zur Übersicht</button>
     <div class="td-meta">
       <span class="td-num" style="color:#ff9800">100</span>
-      <span class="td-cat" style="color:#ff9800">⚠️ Sicherheit</span>
+      <span class="td-cat" style="color:#ff9800">Sicherheit</span>
     </div>
     <h1 class="td-title">Dokumentation</h1>
     <p class="td-preview">Was nicht dokumentiert ist, existiert nicht.</p>
@@ -3229,7 +3229,7 @@ function checkAnswer(qid, chosen, correct, btn) {
   const res = document.getElementById(qid + '-result');
   const icon = document.getElementById(qid + '-icon');
   const txt = document.getElementById(qid + '-text');
-  icon.textContent = chosen === correct ? '✅' : '❌';
+  icon.innerHTML = chosen === correct ? '<i data-lucide='check-circle' style='width:20px;height:20px;color:#00D084'></i>' : '<i data-lucide='x-circle' style='width:20px;height:20px;color:#FF5A5A'></i>';
   txt.textContent = chosen === correct ? 'Richtig!' : 'Falsch.';
   res.style.display = 'block';
 }
@@ -3245,5 +3245,7 @@ function handleHash() {
 window.addEventListener('hashchange', handleHash);
 handleHash();
 </script>
-<script src="/cookie-banner.js"></script></body>
+<script src="/cookie-banner.js"></script><script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script>lucide.createIcons();document.addEventListener("DOMContentLoaded",function(){setTimeout(function(){lucide.createIcons();},100)});</script>
+</body>
 </html>

@@ -3229,7 +3229,7 @@ function checkAnswer(qid, chosen, correct, btn) {
   const res = document.getElementById(qid + '-result');
   const icon = document.getElementById(qid + '-icon');
   const txt = document.getElementById(qid + '-text');
-  icon.innerHTML = chosen === correct ? '<i data-lucide='check-circle' style='width:20px;height:20px;color:#00D084'></i>' : '<i data-lucide='x-circle' style='width:20px;height:20px;color:#FF5A5A'></i>';
+  icon.innerHTML = chosen === correct ? '<i data-lucide="check-circle" style="width:20px;height:20px;color:#00D084"></i>' : '<i data-lucide="x-circle" style="width:20px;height:20px;color:#FF5A5A"></i>';
   txt.textContent = chosen === correct ? 'Richtig!' : 'Falsch.';
   res.style.display = 'block';
 }

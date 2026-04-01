@@ -154,11 +154,15 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:2r
 
 /* ─── MOBILE ──────────────────────────────────────────────────────────── */
 @media(max-width:640px){
-  .hero{padding:2.5rem 4% 2rem}
+  .hero{padding:2rem 4% 1.5rem}
   nav .nav-counter{display:none}
+  nav{padding:0 4%}
+  .nav-right .nav-pill:first-child{display:none}
   #topic-grid{grid-template-columns:1fr;gap:10px}
   .td-nav{flex-direction:column}
   .nav-btn{max-width:100%}
+  .cat-filter{gap:.3rem}
+  .cat-btn{font-size:.75rem;padding:.35rem .8rem}
 }
 </style>
 </head>

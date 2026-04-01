@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="VDE-Rechner — Leitungsschutz, Spannungsfall, Abschaltbedingung nach VDE 0298-4 / VDE 0100-520 / VDE 0100-410. Kostenlos, live, ohne Anmeldung."/>
+<meta name="theme-color" content="#0d1b2e"/>
+<title>VDE-Rechner | Leitungsschutz · Spannungsfall · Abschaltbedingung — ElektroGenius</title>
+<link rel="canonical" href="https://lernportal.elektrogenius.de/vde-rechner.html"/>
+<meta property="og:title" content="VDE-Rechner — Leitungsschutz, Spannungsfall, Abschaltbedingung | ElektroGenius"/>
+<meta property="og:description" content="Live-Berechnung nach VDE 0298-4, VDE 0100-520 und VDE 0100-410. Mit Magic Fix und Auslastungsanzeige."/>
+<meta property="og:url" content="https://lernportal.elektrogenius.de/vde-rechner.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://elektrogenius.de/logonewEG.png"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0d1b2e;--navy2:#0f2035;--navy3:#122236;--navy4:#1a3050;
+  --white:#f0f4ff;--cyan:#00c6ff;--cyan2:#00e5ff;
+  --muted:#7a95b0;--text2:#A0A0B8;--text3:#6A6A88;
+  --green:#22c55e;--orange:#f5a623;--red:#ef4444;
+  --border:rgba(0,198,255,.15);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(0,198,255,.08) 0%,transparent 70%),repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(0,198,255,.025) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(0,198,255,.025) 40px);pointer-events:none;z-index:0}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--navy2)}::-webkit-scrollbar-thumb{background:var(--navy4);border-radius:3px}
+
+/* ─── NAV ─────────────────────────────────────────────────────────────── */
+nav{position:sticky;top:0;z-index:100;background:rgba(13,27,46,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 4%;height:62px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-logo-mark{font-family:'Barlow Condensed',sans-serif;font-size:1.55rem;font-weight:900;color:var(--cyan);letter-spacing:-.02em;line-height:1}
+.nav-logo-sub{font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.nav-right{display:flex;align-items:center;gap:.7rem;flex-shrink:0}
+.nav-pill{font-family:'Barlow Condensed',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.05em;padding:.4rem 1rem;border-radius:6px;text-decoration:none;border:1px solid var(--border);color:var(--muted);transition:all .2s;white-space:nowrap}
+.nav-pill:hover{border-color:var(--cyan);color:var(--cyan)}
+.nav-pill.primary{background:var(--cyan);color:var(--navy);border-color:var(--cyan)}
+.nav-pill.primary:hover{background:var(--cyan2)}
+
+/* ─── HERO ────────────────────────────────────────────────────────────── */
+.hero{position:relative;z-index:1;text-align:center;padding:3rem 5% 2rem}
+.hero-tag{display:inline-flex;align-items:center;gap:7px;background:rgba(0,198,255,.08);border:1px solid var(--border);border-radius:100px;padding:.3rem 1rem;font-size:.75rem;font-weight:700;letter-spacing:.1em;color:var(--cyan);text-transform:uppercase;margin-bottom:1.2rem}
+.hero-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2.4rem,6vw,4rem);font-weight:900;line-height:1;letter-spacing:-.02em;margin-bottom:.8rem}
+.hero h1 em{font-style:normal;color:var(--cyan)}
+.hero-sub{font-size:.95rem;color:var(--muted);max-width:560px;margin:0 auto 1.5rem;line-height:1.7}
+
+/* ─── DISCLAIMER ──────────────────────────────────────────────────────── */
+.disclaimer{max-width:1100px;margin:0 auto 1.5rem;padding:0 4%;position:relative;z-index:1}
+.disclaimer-inner{display:flex;align-items:flex-start;gap:.7rem;background:rgba(245,166,35,.07);border:1px solid rgba(245,166,35,.25);border-radius:10px;padding:.8rem 1rem;font-size:.82rem;color:#c4a45a;line-height:1.6}
+
+/* ─── TABS ────────────────────────────────────────────────────────────── */
+.tabs-wrap{max-width:1100px;margin:0 auto 1.5rem;padding:0 4%;position:relative;z-index:1;display:flex;gap:.6rem;flex-wrap:wrap}
+.tab-btn{font-family:'Barlow Condensed',sans-serif;font-size:.88rem;font-weight:700;letter-spacing:.04em;padding:.6rem 1.3rem;border-radius:12px;border:1px solid rgba(0,198,255,.15);background:rgba(15,32,53,.8);color:var(--muted);cursor:pointer;transition:all .2s;min-height:44px}
+.tab-btn.active-cyan{background:rgba(0,198,255,.1);border-color:rgba(0,198,255,.4);color:var(--cyan)}
+.tab-btn.active-green{background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.4);color:var(--green)}
+.tab-btn.active-orange{background:rgba(245,166,35,.1);border-color:rgba(245,166,35,.4);color:var(--orange)}
+
+/* ─── GRID LAYOUT ─────────────────────────────────────────────────────── */
+.calc-wrap{max-width:1100px;margin:0 auto;padding:0 4% 4rem;position:relative;z-index:1}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+@media(max-width:768px){.grid-2{grid-template-columns:1fr}}
+
+/* ─── CARDS ───────────────────────────────────────────────────────────── */
+.card{background:#0f2035;border:1px solid rgba(0,198,255,.12);border-radius:16px;padding:1.5rem}
+.card-title{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;color:var(--white);margin-bottom:.3rem}
+.card-sub{font-size:.78rem;color:var(--text3);margin-bottom:1.2rem}
+.space-y{display:flex;flex-direction:column;gap:1.1rem}
+
+/* ─── INPUTS ──────────────────────────────────────────────────────────── */
+.field-label{font-size:.78rem;font-weight:600;color:var(--muted);margin-bottom:.4rem;display:block}
+.field-label span{color:#2e4f70}
+input[type=number],select{width:100%;padding:.65rem .9rem;background:#0a1826;border:1px solid rgba(0,198,255,.12);border-radius:10px;color:var(--white);font-size:.9rem;font-family:'Barlow',sans-serif;outline:none;transition:border-color .2s;min-height:44px;appearance:none;-webkit-appearance:none}
+input[type=number]:focus,select:focus{border-color:rgba(0,198,255,.4)}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234a6fa5' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .9rem center;padding-right:2.2rem}
+
+/* ─── SEGMENTED CONTROLS ──────────────────────────────────────────────── */
+.seg{display:flex;border-radius:10px;overflow:hidden;border:1px solid rgba(0,198,255,.12)}
+.seg button{flex:1;padding:.65rem .5rem;font-size:.78rem;font-weight:700;font-family:'Barlow Condensed',sans-serif;letter-spacing:.03em;background:#0a1826;color:var(--muted);border:none;border-right:1px solid rgba(0,198,255,.1);cursor:pointer;transition:all .18s;min-height:44px;line-height:1.3}
+.seg button:last-child{border-right:none}
+.seg button.active{background:rgba(0,198,255,.12);color:var(--cyan)}
+.seg button:hover:not(.active){background:rgba(255,255,255,.03);color:var(--white)}
+
+/* ─── RESULT CARDS ────────────────────────────────────────────────────── */
+.res-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text3);margin-bottom:.5rem}
+.res-value{font-family:'Barlow Condensed',sans-serif;font-size:3rem;font-weight:900;line-height:1;margin-bottom:.2rem}
+.res-sub{font-size:.8rem;color:var(--muted)}
+.factors{display:flex;flex-direction:column;gap:.3rem;margin-top:.8rem;padding-top:.8rem;border-top:1px solid rgba(0,198,255,.07)}
+.factor-row{display:flex;justify-content:space-between;font-size:.78rem;color:var(--text3)}
+
+/* ─── STATUS BADGE ────────────────────────────────────────────────────── */
+.status-ok{background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.3);border-radius:12px;padding:.9rem 1rem}
+.status-err{background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.3);border-radius:12px;padding:.9rem 1rem}
+.status-title{font-size:.9rem;font-weight:700;font-family:'Barlow Condensed',sans-serif;display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem}
+.status-detail{font-size:.78rem;color:var(--muted);font-family:monospace;line-height:1.6}
+
+/* ─── AUSLASTUNGSBAR ──────────────────────────────────────────────────── */
+.bar-wrap{margin-top:1rem}
+.bar-header{display:flex;justify-content:space-between;font-size:.75rem;color:var(--muted);margin-bottom:.4rem}
+.bar-track{width:100%;height:10px;background:#1e3a5f;border-radius:5px;overflow:hidden}
+.bar-fill{height:100%;border-radius:5px;transition:width .3s,background .3s}
+.bar-footer{display:flex;justify-content:space-between;font-size:.73rem;color:var(--text3);margin-top:.3rem}
+
+/* ─── MAGIC FIX ───────────────────────────────────────────────────────── */
+.magic-wrap{background:rgba(245,166,35,.06);border:1px solid rgba(245,166,35,.25);border-radius:12px;padding:1rem}
+.magic-hint{font-size:.8rem;color:#c4a45a;margin-bottom:.7rem}
+.magic-btn{width:100%;padding:.75rem 1rem;background:linear-gradient(135deg,#f5a623,#c4841c);color:#0d1b2e;border:none;border-radius:10px;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;cursor:pointer;transition:opacity .2s;display:flex;align-items:center;justify-content:center;gap:.5rem;min-height:44px}
+.magic-btn:hover{opacity:.88}
+.fix-active{display:flex;align-items:center;gap:.5rem;font-size:.8rem;background:rgba(34,197,94,.07);border:1px solid rgba(34,197,94,.25);border-radius:10px;padding:.6rem .9rem;color:var(--green)}
+.fix-reset{margin-left:auto;font-size:.75rem;text-decoration:underline;cursor:pointer;color:var(--text3);background:none;border:none}
+
+/* ─── CABLE REC ───────────────────────────────────────────────────────── */
+.cable-rec{background:rgba(0,198,255,.04);border:1px solid rgba(0,198,255,.12);border-radius:12px;padding:1rem}
+.cable-val{font-family:'Barlow Condensed',sans-serif;font-size:1.25rem;font-weight:700;color:var(--white);margin:.2rem 0}
+
+/* ─── HINT BOX ────────────────────────────────────────────────────────── */
+.hint-box{background:#0a1826;border:1px solid rgba(0,198,255,.1);border-radius:10px;padding:.7rem 1rem;font-size:.78rem;color:var(--text3);line-height:1.7}
+
+/* ─── FOOTER ──────────────────────────────────────────────────────────── */
+footer{text-align:center;padding:2rem 4%;font-size:.78rem;color:var(--text3);border-top:1px solid rgba(0,198,255,.07);position:relative;z-index:1}
+footer a{color:var(--muted);text-decoration:none}
+footer a:hover{color:var(--cyan)}
+
+@media(max-width:600px){
+  .nav-pill:first-of-type{display:none}
+  .hero h1{font-size:2.2rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-brand">
+    <div>
+      <div class="nav-logo-mark">VoltBase</div>
+      <div class="nav-logo-sub">ElektroGenius</div>
+    </div>
+  </a>
+  <div class="nav-right">
+    <a href="https://elektrogenius.de" class="nav-pill">Hauptseite</a>
+    <a href="/" class="nav-pill">← Lernportal</a>
+    <a href="https://app.elektrogenius.de" target="_blank" class="nav-pill primary">MaterialCheck</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-tag">Live-Berechnung</div>
+  <h1>VDE-<em>Rechner</em></h1>
+  <p class="hero-sub">Leitungsschutz · Spannungsfall · Abschaltbedingung<br>nach VDE 0298-4 / VDE 0100-520 / VDE 0100-410 — reaktiv, ohne Button</p>
+</div>
+
+<div class="disclaimer">
+  <div class="disclaimer-inner">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f5a623" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    <span><strong style="color:#f5a623">Haftungsausschluss:</strong> Diese Ergebnisse dienen der Orientierung und ersetzen keine Fachplanung. Für rechtssichere Auslegungen ist eine zugelassene Elektrofachkraft verantwortlich. ElektroGenius / Safin Saglam übernimmt keinerlei Haftung für Schäden, die aus der Nutzung dieser Berechnungen entstehen.</span>
+  </div>
+</div>
+
+<div class="tabs-wrap">
+  <button class="tab-btn active-cyan" onclick="setTab('ls')">① Leitungsschutz</button>
+  <button class="tab-btn" onclick="setTab('sf')">② Spannungsfall</button>
+  <button class="tab-btn" onclick="setTab('ab')">③ Abschaltbedingung</button>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ MODUL 1 -->
+<div class="calc-wrap" id="tab-ls">
+  <div class="grid-2">
+    <!-- Eingaben -->
+    <div class="card">
+      <div class="card-title">Leitungsschutz nach VDE 0298-4</div>
+      <div class="card-sub">Alle Felder reagieren live — kein Berechnen-Button</div>
+      <div class="space-y">
+
+        <div>
+          <label class="field-label">System</label>
+          <div class="seg" id="seg-phasig">
+            <button class="active" data-val="1" onclick="setSeg('phasig',1,this)">1-phasig 230 V</button>
+            <button data-val="3" onclick="setSeg('phasig',3,this)">3-phasig 400 V</button>
+          </div>
+        </div>
+
+        <div>
+          <label class="field-label">Bemessungsleistung <span>(W)</span></label>
+          <input type="number" inputmode="decimal" id="in-leistung" value="3000" min="0" step="100" oninput="calc()"/>
+        </div>
+
+        <div>
+          <label class="field-label">Leistungsfaktor cos φ</label>
+          <input type="number" inputmode="decimal" id="in-cosphi" value="0.9" min="0.1" max="1" step="0.01" oninput="calc()"/>
+        </div>
+
+        <div>
+          <label class="field-label">Leitermaterial</label>
+          <div class="seg" id="seg-material">
+            <button class="active" data-val="cu" onclick="setSeg('material','cu',this)">Kupfer (Cu)</button>
+            <button data-val="al" onclick="setSeg('material','al',this)">Aluminium (Al)</button>
+          </div>
+        </div>
+
+        <div>
+          <label class="field-label">Isolierung</label>
+          <div class="seg" id="seg-isolation">
+            <button class="active" data-val="pvc" onclick="setSeg('isolation','pvc',this)">PVC 70 °C</button>
+            <button data-val="xlpe" onclick="setSeg('isolation','xlpe',this)">XLPE 90 °C</button>
+          </div>
+        </div>
+
+        <div>
+          <label class="field-label">Verlegeart (VDE 0298-4)</label>
+          <select id="in-verlegeart" onchange="calc()">
+            <option value="B1">B1 — Einzelader in Rohr auf/in Wand</option>
+            <option value="B2" selected>B2 — Mehradr. Kabel in Rohr auf/in Wand</option>
+            <option value="C">C — Direkt auf Wand / Kabelkanal</option>
+            <option value="E">E — Freie Luft / Kabelpritschen</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="field-label">Umgebungstemperatur</label>
+          <select id="in-temp" onchange="calc()">
+            <option value="10">10 °C</option><option value="15">15 °C</option>
+            <option value="20">20 °C</option><option value="25">25 °C</option>
+            <option value="30" selected>30 °C</option><option value="35">35 °C</option>
+            <option value="40">40 °C</option><option value="45">45 °C</option>
+            <option value="50">50 °C</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="field-label">Häufung (Anz. gebündelte Kabel)</label>
+          <select id="in-haeufung" onchange="calc()">
+            <option value="1" selected>1 Kabel (f₂ = 1.00)</option>
+            <option value="2">2 Kabel (f₂ = 0.80)</option>
+            <option value="3">3 Kabel (f₂ = 0.70)</option>
+            <option value="4">4 Kabel (f₂ = 0.65)</option>
+            <option value="5">5 Kabel (f₂ = 0.60)</option>
+            <option value="6">6 Kabel (f₂ = 0.57)</option>
+            <option value="7">7 Kabel (f₂ = 0.54)</option>
+            <option value="8">8 Kabel (f₂ = 0.52)</option>
+            <option value="9">9 Kabel (f₂ = 0.50)</option>
+            <option value="10">10 Kabel (f₂ = 0.48)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="field-label">Querschnitt (manuell)</label>
+          <select id="in-qs" onchange="S.fixedQs=null;calc()">
+            <option value="1.5">1.5 mm²</option>
+            <option value="2.5" selected>2.5 mm²</option>
+            <option value="4">4 mm²</option><option value="6">6 mm²</option>
+            <option value="10">10 mm²</option><option value="16">16 mm²</option>
+            <option value="25">25 mm²</option><option value="35">35 mm²</option>
+            <option value="50">50 mm²</option><option value="70">70 mm²</option>
+            <option value="95">95 mm²</option><option value="120">120 mm²</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="field-label">Absicherung In</label>
+          <select id="in-innenn" onchange="calc()">
+            <option value="6">6 A</option><option value="10">10 A</option>
+            <option value="13">13 A</option><option value="16" selected>16 A</option>
+            <option value="20">20 A</option><option value="25">25 A</option>
+            <option value="32">32 A</option><option value="40">40 A</option>
+            <option value="50">50 A</option><option value="63">63 A</option>
+            <option value="80">80 A</option><option value="100">100 A</option>
+            <option value="125">125 A</option><option value="160">160 A</option>
+            <option value="200">200 A</option><option value="250">250 A</option>
+          </select>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Ergebnisse -->
+    <div style="display:flex;flex-direction:column;gap:1rem">
+
+      <div class="card">
+        <div class="res-label">Betriebsstrom Ib</div>
+        <div class="res-value" style="color:var(--cyan)" id="r-ib">—</div>
+        <div class="res-sub" id="r-ib-formula">—</div>
+      </div>
+
+      <div class="card">
+        <div class="res-label">Strombelastbarkeit Iz</div>
+        <div class="res-value" style="color:#e6edf3" id="r-iz">—</div>
+        <div class="factors" id="r-iz-factors"></div>
+        <div class="bar-wrap" id="r-ls-bar"></div>
+      </div>
+
+      <div id="r-ls-status"></div>
+      <div id="r-ls-magic"></div>
+      <div id="r-ls-fixactive"></div>
+
+      <div class="cable-rec card" id="r-cable">
+        <div class="res-label">Kabelempfehlung</div>
+        <div class="cable-val" id="r-cable-val">—</div>
+        <div style="font-size:.78rem;color:var(--text3)" id="r-cable-ls">—</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ MODUL 2 -->
+<div class="calc-wrap" id="tab-sf" style="display:none">
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Spannungsfall nach VDE 0100-520</div>
+      <div class="card-sub">Betriebsstrom aus Modul 1 übernommen</div>
+      <div class="space-y">
+
+        <div class="hint-box" id="sf-ib-hint">Ib = — A</div>
+
+        <div>
+          <label class="field-label">Leitungslänge <span>(m)</span></label>
+          <input type="number" inputmode="decimal" id="in-sflaenge" value="30" min="0" step="1" oninput="calcSf()"/>
+        </div>
+
+        <div>
+          <label class="field-label">Querschnitt</label>
+          <select id="in-sfqs" onchange="S.sfFixQs=null;calcSf()">
+            <option value="1.5">1.5 mm²</option>
+            <option value="2.5" selected>2.5 mm²</option>
+            <option value="4">4 mm²</option><option value="6">6 mm²</option>
+            <option value="10">10 mm²</option><option value="16">16 mm²</option>
+            <option value="25">25 mm²</option><option value="35">35 mm²</option>
+            <option value="50">50 mm²</option><option value="70">70 mm²</option>
+            <option value="95">95 mm²</option><option value="120">120 mm²</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="field-label">Grenzwert ΔU</label>
+          <select id="in-sfgrenz" onchange="S.sfFixQs=null;calcSf()">
+            <option value="3" selected>3 % — Hausinstallation, Beleuchtung</option>
+            <option value="4">4 % — allgemein (VDE 0100-520)</option>
+            <option value="5">5 % — Motoren, Industrie</option>
+          </select>
+        </div>
+
+        <div class="hint-box" id="sf-formula-hint">—</div>
+
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:1rem">
+
+      <div class="card">
+        <div class="res-label">Spannungsfall</div>
+        <div class="res-value" id="r-sf-pct">—</div>
+        <div class="res-sub" id="r-sf-v">—</div>
+        <div class="bar-wrap" id="r-sf-bar"></div>
+      </div>
+
+      <div id="r-sf-status"></div>
+      <div id="r-sf-magic"></div>
+      <div id="r-sf-fixactive"></div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ MODUL 3 -->
+<div class="calc-wrap" id="tab-ab" style="display:none">
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Abschaltbedingung nach VDE 0100-410</div>
+      <div class="card-sub">Personenschutz — Abschaltung in ≤ 0,4 s</div>
+      <div class="space-y">
+
+        <div>
+          <label class="field-label">Nennspannung gegen Erde U₀ <span>(V)</span></label>
+          <input type="number" inputmode="decimal" id="in-u0" value="230" min="0" step="1" oninput="calcAb()"/>
+        </div>
+
+        <div>
+          <label class="field-label">LS-Schalter Charakteristik</label>
+          <div class="seg" id="seg-lstyp">
+            <button class="active" data-val="B" onclick="setSeg('lstyp','B',this)">Typ B (×5)</button>
+            <button data-val="C" onclick="setSeg('lstyp','C',this)">Typ C (×10)</button>
+            <button data-val="D" onclick="setSeg('lstyp','D',this)">Typ D (×20)</button>
+          </div>
+        </div>
+
+        <div>
+          <label class="field-label">Nennstrom In</label>
+          <select id="in-lsin" onchange="calcAb()">
+            <option value="6">6 A</option><option value="10">10 A</option>
+            <option value="13">13 A</option><option value="16" selected>16 A</option>
+            <option value="20">20 A</option><option value="25">25 A</option>
+            <option value="32">32 A</option><option value="40">40 A</option>
+            <option value="50">50 A</option><option value="63">63 A</option>
+          </select>
+        </div>
+
+        <div style="border-top:1px solid rgba(0,198,255,.08);padding-top:1rem">
+          <p style="font-size:.78rem;font-weight:600;color:var(--muted);margin-bottom:.8rem">Schleifenwiderstand berechnen (optional)</p>
+
+          <div>
+            <label class="field-label">Leitermaterial (Schleife)</label>
+            <div class="seg" id="seg-abmat">
+              <button class="active" data-val="cu" onclick="setSeg('abmat','cu',this)">Kupfer (Cu)</button>
+              <button data-val="al" onclick="setSeg('abmat','al',this)">Aluminium (Al)</button>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label class="field-label">Leitungslänge <span>(m)</span></label>
+          <input type="number" inputmode="decimal" id="in-ablaenge" value="50" min="0" step="1" oninput="calcAb()"/>
+        </div>
+
+        <div>
+          <label class="field-label">Querschnitt Schleife</label>
+          <select id="in-abqs" onchange="calcAb()">
+            <option value="1.5">1.5 mm²</option>
+            <option value="2.5" selected>2.5 mm²</option>
+            <option value="4">4 mm²</option><option value="6">6 mm²</option>
+            <option value="10">10 mm²</option><option value="16">16 mm²</option>
+            <option value="25">25 mm²</option><option value="35">35 mm²</option>
+            <option value="50">50 mm²</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="field-label">Gemessener Zs (0 = berechnen) <span>(Ω)</span></label>
+          <input type="number" inputmode="decimal" id="in-zsreal" value="0" min="0" step="0.01" oninput="calcAb()"/>
+        </div>
+
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:1rem">
+
+      <div class="card">
+        <div class="res-label">Auslösestrom Ia</div>
+        <div class="res-value" style="color:var(--cyan)" id="r-ia">—</div>
+        <div class="res-sub" id="r-ia-sub">—</div>
+      </div>
+
+      <div class="card">
+        <div class="res-label">Zulässiger Zs,zul</div>
+        <div class="res-value" style="color:#e6edf3" id="r-zszul">—</div>
+        <div class="res-sub" id="r-zs-sub">—</div>
+      </div>
+
+      <div class="card">
+        <div class="res-label">Schleifenwiderstand Zs</div>
+        <div class="res-value" id="r-zsgesamt">—</div>
+        <div class="res-sub" id="r-zs-mode">—</div>
+      </div>
+
+      <div id="r-ab-status"></div>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 ElektroGenius — Safin Saglam &nbsp;|&nbsp;
+    <a href="/datenschutz.html">Datenschutz</a> &nbsp;|&nbsp;
+    <a href="/impressum.html">Impressum</a>
+  </p>
+  <p style="margin-top:.4rem">Alle Angaben ohne Gewähr. Keine Haftung für Planungsfehler.</p>
+</footer>
+
+<script>
+// ═══════════════════════════════════════════════════════
+//  VDE 0298-4 DATENTABELLEN
+// ═══════════════════════════════════════════════════════
+
+const CS = [1.5,2.5,4,6,10,16,25,35,50,70,95,120];
+
+const IZ_CU_PVC = {
+  B1:{1.5:15.5,2.5:21,4:28,6:36,10:50,16:68,25:89,35:110,50:134,70:171,95:207,120:239},
+  B2:{1.5:13.5,2.5:18,4:24,6:31,10:42,16:56,25:73,35:89,50:108,70:136,95:164,120:188},
+  C: {1.5:17.5,2.5:24,4:32,6:41,10:57,16:76,25:96,35:119,50:144,70:184,95:223,120:259},
+  E: {1.5:19.5,2.5:27,4:36,6:46,10:63,16:85,25:112,35:138,50:168,70:213,95:258,120:299},
+};
+const IZ_CU_XLPE = {
+  B1:{1.5:19,2.5:25,4:34,6:43,10:60,16:80,25:101,35:126,50:153,70:196,95:238,120:276},
+  B2:{1.5:16.5,2.5:22,4:30,6:38,10:52,16:69,25:90,35:111,50:133,70:168,95:201,120:232},
+  C: {1.5:22,2.5:30,4:40,6:51,10:70,16:94,25:119,35:147,50:179,70:229,95:278,120:322},
+  E: {1.5:24,2.5:33,4:45,6:58,10:80,16:107,25:138,35:171,50:209,70:269,95:328,120:382},
+};
+const AL_F = 0.78;
+const TEMP_PVC  = {10:1.22,15:1.17,20:1.12,25:1.06,30:1.00,35:0.94,40:0.87,45:0.79,50:0.71};
+const TEMP_XLPE = {10:1.15,15:1.12,20:1.08,25:1.04,30:1.00,35:0.96,40:0.91,45:0.87,50:0.82};
+const HAUF = {1:1.00,2:0.80,3:0.70,4:0.65,5:0.60,6:0.57,7:0.54,8:0.52,9:0.50,10:0.48};
+
+// ═══════════════════════════════════════════════════════
+//  STATE
+// ═══════════════════════════════════════════════════════
+const S = {
+  phasig:1, material:'cu', isolation:'pvc', lstyp:'B', abmat:'cu',
+  fixedQs:null, sfFixQs:null,
+};
+
+// ═══════════════════════════════════════════════════════
+//  ENGINE
+// ═══════════════════════════════════════════════════════
+function getIz(qs, va, mat, iso) {
+  const tbl = iso==='xlpe' ? IZ_CU_XLPE : IZ_CU_PVC;
+  const base = (tbl[va]||{})[qs] || 0;
+  return mat==='al' ? base*AL_F : base;
+}
+function getTF(temp, iso) {
+  const t = iso==='xlpe' ? TEMP_XLPE : TEMP_PVC;
+  const k = Math.round(temp/5)*5;
+  return t[k] ?? 1.0;
+}
+function getHF(n) { return HAUF[Math.min(n,10)] ?? 0.48; }
+function getIb(p,u,cos,ph) {
+  if(!cos||!u) return 0;
+  return ph===3 ? p/(Math.sqrt(3)*u*cos) : p/(u*cos);
+}
+function getSF(ib,l,qs,mat,ph,u,cos) {
+  const k = mat==='cu' ? 56 : 35;
+  const f = ph===3 ? Math.sqrt(3) : 2;
+  const dU = (f*l*ib*cos)/(k*qs);
+  return {dU, pct:(dU/u)*100};
+}
+function magicFix(ib,va,mat,iso,temp,hauf,inNenn) {
+  for(const qs of CS){
+    const iz = getIz(qs,va,mat,iso)*getTF(temp,iso)*getHF(hauf);
+    if(ib<=inNenn && inNenn<=iz) return qs;
+  }
+  return null;
+}
+function magicFixSF(ib,l,mat,ph,u,cos,grenz) {
+  for(const qs of CS){
+    if(getSF(ib,l,qs,mat,ph,u,cos).pct<=grenz) return qs;
+  }
+  return null;
+}
+
+// ═══════════════════════════════════════════════════════
+//  RENDER HELPERS
+// ═══════════════════════════════════════════════════════
+function bar(wert,max,einheit,id,gWarnPct=0.8){
+  const pct = max>0 ? Math.min(wert/max,1) : 0;
+  const farbe = pct>=1 ? '#ef4444' : pct>=gWarnPct ? '#f5a623' : '#22c55e';
+  return `<div>
+    <div class="bar-header"><span>Auslastung</span><span style="color:${farbe};font-weight:700">${(pct*100).toFixed(1)}%</span></div>
+    <div class="bar-track"><div class="bar-fill" style="width:${pct*100}%;background:${farbe}"></div></div>
+    <div class="bar-footer"><span>${wert.toFixed(1)} ${einheit}</span><span>${max.toFixed(1)} ${einheit}</span></div>
+  </div>`;
+}
+
+function statusOk(msg,detail){
+  return `<div class="status-ok"><div class="status-title" style="color:var(--green)">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    ${msg}</div><div class="status-detail">${detail}</div></div>`;
+}
+function statusErr(msg,detail){
+  return `<div class="status-err"><div class="status-title" style="color:var(--red)">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    ${msg}</div><div class="status-detail">${detail}</div></div>`;
+}
+function magicBtn(text,onclick){
+  return `<div class="magic-wrap">
+    <p class="magic-hint">${text}</p>
+    <button class="magic-btn" onclick="${onclick}">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      ⚡ Auto-Fix anwenden
+    </button>
+  </div>`;
+}
+function fixActive(qs,reset){
+  return `<div class="fix-active">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    Auto-Fix aktiv: ${qs} mm² gewählt
+    <button class="fix-reset" onclick="${reset}">Zurücksetzen</button>
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════════════
+//  BERECHNUNG MODUL 1
+// ═══════════════════════════════════════════════════════
+function calc() {
+  const p    = +document.getElementById('in-leistung').value || 0;
+  const cos  = Math.min(1,Math.max(0.1,+document.getElementById('in-cosphi').value||0.9));
+  const va   = document.getElementById('in-verlegeart').value;
+  const temp = +document.getElementById('in-temp').value;
+  const hauf = +document.getElementById('in-haeufung').value;
+  const manQs= +document.getElementById('in-qs').value;
+  const inN  = +document.getElementById('in-innenn').value;
+  const u    = S.phasig===3 ? 400 : 230;
+  const mat  = S.material, iso = S.isolation;
+
+  const ib = getIb(p,u,cos,S.phasig);
+  const qs = S.fixedQs ?? manQs;
+  const izBase = getIz(qs,va,mat,iso);
+  const f1 = getTF(temp,iso);
+  const f2 = getHF(hauf);
+  const iz = izBase*f1*f2;
+  const ok = ib<=inN && inN<=iz;
+  const fix = ok ? null : magicFix(ib,va,mat,iso,temp,hauf,inN);
+
+  document.getElementById('r-ib').textContent = ib.toFixed(2)+' A';
+  document.getElementById('r-ib-formula').textContent =
+    S.phasig===3 ? `P / (√3 · ${u}V · ${cos})` : `P / (${u}V · ${cos})`;
+
+  document.getElementById('r-iz').textContent = iz.toFixed(1)+' A';
+  document.getElementById('r-iz-factors').innerHTML =
+    `<div class="factor-row"><span>Grundwert Ir (${qs} mm², ${va})</span><span>${izBase.toFixed(1)} A</span></div>
+     <div class="factor-row"><span>Temperaturfaktor f₁ (${temp}°C)</span><span>× ${f1.toFixed(2)}</span></div>
+     <div class="factor-row"><span>Häufungsfaktor f₂ (${hauf} Kabel)</span><span>× ${f2.toFixed(2)}</span></div>`;
+
+  document.getElementById('r-ls-bar').innerHTML = bar(ib,iz,'A','ls');
+
+  document.getElementById('r-ls-status').innerHTML = ok
+    ? statusOk('VDE-Bedingung erfüllt ✓',`Ib (${ib.toFixed(1)} A) ≤ In (${inN} A) ≤ Iz (${iz.toFixed(1)} A)`)
+    : statusErr('VDE-Bedingung verletzt!',`Ib (${ib.toFixed(1)} A) ≤ In (${inN} A) ≤ Iz (${iz.toFixed(1)} A)<br>Ib ≤ In: ${ib<=inN?'✓':'✗'} &nbsp;|&nbsp; In ≤ Iz: ${inN<=iz?'✓':'✗'}`);
+
+  document.getElementById('r-ls-magic').innerHTML = (!ok && fix)
+    ? magicBtn(`Querschnitt zu gering — min. ${fix} mm² erforderlich.`,`applyFix(${fix})`)
+    : '';
+
+  document.getElementById('r-ls-fixactive').innerHTML = S.fixedQs
+    ? fixActive(S.fixedQs,'resetFix()')
+    : '';
+
+  const cableName = mat==='cu' ? 'NYM-J' : 'NAYY';
+  const coreStr = S.phasig===3 ? `3×${qs}` : `2×${qs}`;
+  document.getElementById('r-cable-val').textContent = `${cableName} ${coreStr} mm²`;
+  document.getElementById('r-cable-ls').textContent = `LS-Schalter ≤ ${inN} A`;
+
+  // update sf hint
+  document.getElementById('sf-ib-hint').textContent =
+    `Ib = ${ib.toFixed(2)} A (${p} W, ${S.phasig===3?'3~':'1~'}, cos φ ${cos})`;
+  calcSf();
+}
+
+function applyFix(qs) { S.fixedQs=qs; calc(); }
+function resetFix()   { S.fixedQs=null; calc(); }
+
+// ═══════════════════════════════════════════════════════
+//  BERECHNUNG MODUL 2
+// ═══════════════════════════════════════════════════════
+function calcSf() {
+  const p    = +document.getElementById('in-leistung').value || 0;
+  const cos  = Math.min(1,Math.max(0.1,+document.getElementById('in-cosphi').value||0.9));
+  const u    = S.phasig===3 ? 400 : 230;
+  const ib   = getIb(p,u,cos,S.phasig);
+  const l    = +document.getElementById('in-sflaenge').value || 0;
+  const manQs= +document.getElementById('in-sfqs').value;
+  const grenz= +document.getElementById('in-sfgrenz').value;
+  const mat  = S.material;
+  const qs   = S.sfFixQs ?? manQs;
+
+  const {dU,pct} = getSF(ib,l,qs,mat,S.phasig,u,cos);
+  const ok = pct<=grenz;
+  const fix = ok ? null : magicFixSF(ib,l,mat,S.phasig,u,cos,grenz);
+  const farbe = pct>grenz ? '#ef4444' : '#22c55e';
+
+  document.getElementById('r-sf-pct').style.color = farbe;
+  document.getElementById('r-sf-pct').textContent = pct.toFixed(2)+' %';
+  document.getElementById('r-sf-v').textContent = '= '+dU.toFixed(3)+' V';
+
+  document.getElementById('sf-formula-hint').innerHTML =
+    `κ: ${mat==='cu'?'56':'35'} m/Ω·mm² &nbsp;|&nbsp; Formel: ΔU = ${S.phasig===3?'√3':'2'} · L · Ib · cos φ / (κ · A)`;
+
+  document.getElementById('r-sf-bar').innerHTML = bar(pct,grenz,'%','sf');
+  document.getElementById('r-sf-status').innerHTML = ok
+    ? statusOk(`ΔU ≤ ${grenz}% — Norm erfüllt ✓`,`${pct.toFixed(2)}% von max. ${grenz}%`)
+    : statusErr(`ΔU > ${grenz}% — Grenzwert überschritten!`,`${pct.toFixed(2)}% von max. ${grenz}%`);
+
+  document.getElementById('r-sf-magic').innerHTML = (!ok && fix)
+    ? magicBtn(`Querschnitt zu gering für ${l} m Leitungslänge.`,`applySfFix(${fix})`)
+    : '';
+
+  document.getElementById('r-sf-fixactive').innerHTML = S.sfFixQs
+    ? fixActive(S.sfFixQs,'resetSfFix()')
+    : '';
+}
+
+function applySfFix(qs) { S.sfFixQs=qs; calcSf(); }
+function resetSfFix()   { S.sfFixQs=null; calcSf(); }
+
+// ═══════════════════════════════════════════════════════
+//  BERECHNUNG MODUL 3
+// ═══════════════════════════════════════════════════════
+function calcAb() {
+  const u0     = +document.getElementById('in-u0').value || 230;
+  const lsIn   = +document.getElementById('in-lsin').value;
+  const l      = +document.getElementById('in-ablaenge').value || 0;
+  const qs     = +document.getElementById('in-abqs').value;
+  const zsReal = +document.getElementById('in-zsreal').value;
+  const mat    = S.abmat;
+  const faktor = {B:5,C:10,D:20}[S.lstyp] ?? 5;
+
+  const ia = lsIn * faktor;
+  const zsZul = u0 / ia;
+  const rho = mat==='cu' ? 0.0178 : 0.0282;
+  const zsCalc = (2*l*rho)/qs;
+  const zsGes = zsReal>0 ? zsReal : zsCalc;
+  const ok = zsGes <= zsZul;
+  const farbe = ok ? '#22c55e' : '#ef4444';
+
+  document.getElementById('r-ia').textContent = ia.toFixed(1)+' A';
+  document.getElementById('r-ia-sub').textContent = `Typ ${S.lstyp}: In × ${faktor} = ${lsIn} × ${faktor}`;
+  document.getElementById('r-zszul').textContent = zsZul.toFixed(3)+' Ω';
+  document.getElementById('r-zs-sub').textContent = `U₀ / Ia = ${u0} / ${ia.toFixed(1)}`;
+  document.getElementById('r-zsgesamt').style.color = farbe;
+  document.getElementById('r-zsgesamt').textContent = zsGes.toFixed(3)+' Ω';
+  document.getElementById('r-zs-mode').textContent = zsReal>0 ? 'Gemessen (Eingabe)' : `Berechnet: 2 × ${l} m × ρ / ${qs} mm²`;
+
+  document.getElementById('r-ab-status').innerHTML = ok
+    ? statusOk('Abschaltbedingung erfüllt ✓',`Zs (${zsGes.toFixed(3)} Ω) ≤ Zs,zul (${zsZul.toFixed(3)} Ω) ✓<br>Personenschutz gewährleistet.`)
+    : statusErr('Abschaltbedingung NICHT erfüllt!',`Zs (${zsGes.toFixed(3)} Ω) > Zs,zul (${zsZul.toFixed(3)} Ω) ✗<br>Querschnitt erhöhen oder Leitungslänge reduzieren!`);
+}
+
+// ═══════════════════════════════════════════════════════
+//  TAB + SEG HELPERS
+// ═══════════════════════════════════════════════════════
+const TAB_COLORS = {ls:'active-cyan', sf:'active-green', ab:'active-orange'};
+function setTab(t) {
+  ['ls','sf','ab'].forEach(id=>{
+    const el = document.getElementById('tab-'+id);
+    if(el) el.style.display = id===t ? '' : 'none';
+  });
+  document.querySelectorAll('.tab-btn').forEach((btn,i)=>{
+    const ids=['ls','sf','ab'];
+    btn.className = 'tab-btn' + (ids[i]===t ? ' '+TAB_COLORS[ids[i]] : '');
+  });
+}
+
+function setSeg(key, val, btn) {
+  S[key] = typeof val==='number' ? val : val;
+  // update UI
+  btn.closest('.seg').querySelectorAll('button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  // sync spannung
+  if(key==='phasig') {
+    S.phasig = +val;
+    document.getElementById('in-leistung'); // trigger recalc
+  }
+  S.fixedQs = null;
+  S.sfFixQs = null;
+  calc();
+  calcAb();
+}
+
+// ═══════════════════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════════════════
+// default phasig seg: 3-phasig selected
+(function initPhasig(){
+  const seg = document.getElementById('seg-phasig');
+  seg.querySelectorAll('button').forEach(b=>{
+    if(+b.dataset.val===3) { b.classList.add('active'); S.phasig=3; }
+    else b.classList.remove('active');
+  });
+})();
+
+calc();
+calcAb();
+</script>
+</body>
+</html>

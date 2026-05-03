@@ -624,7 +624,7 @@ function calc() {
     : '';
 
   const cableName = mat==='cu' ? 'NYM-J' : 'NAYY';
-  const coreStr = S.phasig===3 ? `3×${qs}` : `2×${qs}`;
+  const coreStr = S.phasig===3 ? `5×${qs}` : `3×${qs}`;
   document.getElementById('r-cable-val').textContent = `${cableName} ${coreStr} mm²`;
   document.getElementById('r-cable-ls').textContent = `LS-Schalter ≤ ${inN} A`;
 
